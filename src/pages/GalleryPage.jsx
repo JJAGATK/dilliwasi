@@ -22,39 +22,39 @@ export function GalleryPage() {
   });
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-[#1C1917] pt-24 sm:pt-28 pb-24">
+    <div className="min-h-screen bg-[#FAF7F2] text-[#241814] pt-24 sm:pt-28 pb-24">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb Navigation */}
-        <nav className="flex items-center space-x-2 text-xs text-[#78716C] mb-4 sm:mb-6">
-          <Link to="/" className="hover:text-[#1C1917] transition-colors">Home</Link>
+        <nav className="flex items-center space-x-2 text-xs text-[#6E5D53] mb-4 sm:mb-6">
+          <Link to="/" className="hover:text-[#241814] transition-colors">Home</Link>
           <span>/</span>
-          <span className="text-[#D81B60] font-medium">Gallery</span>
+          <span className="text-[#9F1239] font-semibold">Gallery</span>
         </nav>
         
         {/* Gallery Header */}
         <div className="max-w-2xl">
-          <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#D81B60] block mb-1">
+          <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#9F1239] block mb-1">
             Visual Archive
           </span>
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#1C1917]">
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#241814]">
             Dilliwasi Gallery
           </h1>
-          <p className="text-sm text-[#57534E] mt-2 leading-relaxed font-light">
+          <p className="text-sm text-[#6E5D53] mt-2 leading-relaxed font-light">
             Atmospheric chronicles of our 100% pure vegetarian culinary craftsmanship, pure desi ghee slow-simmered gravies, clay tandoor starters, and starlit rooftop cafe in Haridwar.
           </p>
         </div>
 
         {/* Gallery Filter Tabs */}
-        <div className="mt-8 flex items-center space-x-2 overflow-x-auto pb-2 scrollbar-none border-b border-stone-200">
+        <div className="mt-8 flex items-center space-x-2 overflow-x-auto pb-2 scrollbar-none border-b border-[rgba(212,163,70,0.2)]">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveFilter(cat.id)}
               className={`px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-150 whitespace-nowrap cursor-pointer shrink-0 ${
                 activeFilter === cat.id
-                  ? 'bg-[#1C1917] text-white shadow-2xs'
-                  : 'bg-white text-[#57534E] hover:text-[#1C1917] border border-stone-200'
+                  ? 'bg-[#9F1239] text-[#FAF7F2] shadow-2xs'
+                  : 'bg-white text-[#6E5D53] hover:text-[#241814] border border-stone-200'
               }`}
             >
               {cat.label}
@@ -68,7 +68,7 @@ export function GalleryPage() {
             <article
               key={item.id}
               onClick={() => setSelectedItem(item)}
-              className="group cursor-pointer rounded-2xl bg-white border border-stone-200/90 overflow-hidden shadow-2xs hover:border-[#D81B60]/35 transition-all duration-200 flex flex-col justify-between"
+              className="group cursor-pointer rounded-2xl bg-white border border-[rgba(212,163,70,0.22)] overflow-hidden shadow-2xs hover:border-[#9F1239]/40 hover:shadow-md transition-all duration-200 flex flex-col justify-between"
             >
               {/* Aspect Container */}
               <div className="relative aspect-[4/3] bg-stone-900 overflow-hidden">
@@ -89,7 +89,7 @@ export function GalleryPage() {
 
                 {/* Top Badge */}
                 <div className="absolute top-3 left-3 z-10">
-                  <span className="px-2.5 py-0.5 text-[9px] font-semibold uppercase tracking-widest text-white bg-black/60 backdrop-blur-xs rounded-full border border-white/20">
+                  <span className="px-2.5 py-0.5 text-[9px] font-semibold uppercase tracking-widest text-[#FAF7F2] bg-[#2A050C]/85 backdrop-blur-xs rounded-full border border-[#D4A346]/30">
                     {item.badge}
                   </span>
                 </div>
@@ -107,10 +107,10 @@ export function GalleryPage() {
 
               {/* Caption */}
               <div className="p-4 flex-1 flex flex-col justify-between space-y-2">
-                <p className="text-xs text-[#57534E] leading-relaxed font-light">
+                <p className="text-xs text-[#6E5D53] leading-relaxed font-light">
                   {item.description}
                 </p>
-                <div className="pt-2 flex items-center justify-between text-[10px] text-[#A8A29E] border-t border-stone-100">
+                <div className="pt-2 flex items-center justify-between text-[10px] text-[#9B897D] border-t border-stone-100">
                   <div className="flex items-center space-x-1.5">
                     <DietaryMarker isVeg={true} />
                     <span className="font-medium text-[#15803D]">Pure Veg</span>
@@ -129,7 +129,7 @@ export function GalleryPage() {
             onClick={() => setSelectedItem(null)}
           >
             <div
-              className="bg-[#FAF8F5] rounded-3xl max-w-xl w-full overflow-hidden shadow-xl border border-stone-200"
+              className="bg-[#FAF7F2] rounded-3xl max-w-xl w-full overflow-hidden shadow-xl border border-[rgba(212,163,70,0.3)]"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative aspect-[16/10] bg-black">
@@ -140,7 +140,7 @@ export function GalleryPage() {
                 />
                 <button
                   onClick={() => setSelectedItem(null)}
-                  className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-[#D81B60] transition-colors"
+                  className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-[#9F1239] transition-colors"
                   aria-label="Close Preview"
                 >
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -151,16 +151,16 @@ export function GalleryPage() {
 
               <div className="p-6 space-y-3">
                 <div className="flex items-center space-x-2">
-                  <span className="px-2 py-0.5 rounded text-[9px] font-semibold uppercase tracking-wider bg-[#FFF0F5] text-[#D81B60] border border-[#D81B60]/30">
+                  <span className="px-2 py-0.5 rounded text-[9px] font-semibold uppercase tracking-wider bg-[#FAF0F2] text-[#9F1239] border border-[#9F1239]/30">
                     {selectedItem.badge}
                   </span>
                   <span className="text-xs text-stone-300">&bull;</span>
-                  <span className="text-[10px] text-[#78716C] uppercase tracking-wider font-medium">{selectedItem.category}</span>
+                  <span className="text-[10px] text-[#6E5D53] uppercase tracking-wider font-semibold">{selectedItem.category}</span>
                 </div>
-                <h3 className="font-serif text-xl font-bold text-[#1C1917]">
+                <h3 className="font-serif text-xl font-bold text-[#241814]">
                   {selectedItem.title}
                 </h3>
-                <p className="text-xs text-[#57534E] leading-relaxed font-light">
+                <p className="text-xs text-[#6E5D53] leading-relaxed font-light">
                   {selectedItem.description}
                 </p>
 
@@ -172,7 +172,7 @@ export function GalleryPage() {
                   </Link>
                   <a
                     href="tel:+919058882691"
-                    className="text-xs font-medium text-[#D81B60] hover:underline"
+                    className="text-xs font-semibold text-[#9F1239] hover:underline"
                   >
                     +91 90588 82691
                   </a>

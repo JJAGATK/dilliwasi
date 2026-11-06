@@ -2,8 +2,8 @@ import React from 'react';
 
 /**
  * Minimalist Brand Logo for Dilliwasi
- * Interlocking 'DW' monogram crest with golden circular rim.
- * Zero emojis, clean typography, strict color discipline.
+ * Features the interlocking 'DW' monogram crest with golden circular rim and royal wine core.
+ * Zero emojis, clean typography, strict luxury color discipline.
  */
 export function BrandLogo({
   variant = 'horizontal', // 'horizontal' | 'crest' | 'full'
@@ -16,7 +16,7 @@ export function BrandLogo({
   const isGold = theme === 'gold';
 
   const goldPrimary = isGold ? '#D4A346' : isDark ? '#E8C066' : '#C59B27';
-  const inkPrimary = isGold ? '#E8C066' : isDark ? '#FAF8F5' : '#1C1917';
+  const inkPrimary = isGold ? '#E8C066' : isDark ? '#FAF7F2' : '#241814';
 
   // Sizing maps
   const heightMap = {
@@ -27,7 +27,7 @@ export function BrandLogo({
 
   const currentSizeClass = heightMap[variant]?.[size] || heightMap.horizontal.md;
 
-  // The DW Monogram Emblem (Gold rim ring + vibrant ruby core)
+  // The DW Monogram Emblem (Gold rim ring + deep royal wine burgundy core)
   const CrestImage = ({ sizeClass = 'w-10 h-10', extraClass = '' }) => (
     <div className={`relative shrink-0 rounded-full overflow-hidden p-[1.5px] bg-gradient-to-tr from-[#C59B27] via-[#FDF0CD] to-[#D4A346] shadow-xs ${sizeClass} ${extraClass}`}>
       <img
@@ -71,7 +71,7 @@ export function BrandLogo({
             </span>
           </div>
           <span
-            className="text-[9px] uppercase tracking-[0.24em] font-medium transition-colors duration-300 mt-1"
+            className="text-[9px] uppercase tracking-[0.22em] font-medium transition-colors duration-300 mt-1"
             style={{ color: goldPrimary }}
           >
             Fine Dine &bull; Pure Desi Ghee &bull; Est. 2001
@@ -112,7 +112,7 @@ export function BrandLogo({
       >
         Fine Dine &bull; Rooftop Cafe &bull; Since 2001
       </span>
-      <span className="text-[10px] text-[#78716C] tracking-widest mt-1 uppercase">
+      <span className="text-[10px] text-[#6E5D53] tracking-widest mt-1 uppercase font-light">
         100% Pure Vegetarian &bull; Pure Desi Ghee
       </span>
     </div>

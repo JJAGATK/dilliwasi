@@ -25,7 +25,7 @@ export function Footer() {
               <span className="px-2.5 py-0.5 rounded text-[9px] uppercase tracking-wider font-semibold text-[#C59B27] bg-white/5 border border-[#C59B27]/40">
                 Pure Desi Ghee
               </span>
-              <span className="px-2.5 py-0.5 rounded text-[9px] uppercase tracking-wider font-semibold text-[#D81B60] bg-white/5 border border-[#D81B60]/40">
+              <span className="px-2.5 py-0.5 rounded text-[9px] uppercase tracking-wider font-semibold text-[#D4AF37] bg-white/5 border border-[#C59B27]/40">
                 Since 2001 &bull; Unit 2
               </span>
             </div>

@@ -52,44 +52,44 @@ export function MenuPage() {
   }, [activeCategory, filterType, searchQuery]);
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-[#1C1917] pt-24 sm:pt-28 pb-24">
+    <div className="min-h-screen bg-[#FAF7F2] text-[#241814] pt-24 sm:pt-28 pb-24">
       {/* Menu Header */}
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb Navigation */}
-        <nav className="flex items-center space-x-2 text-xs text-[#78716C] mb-4 sm:mb-6">
-          <Link to="/" className="hover:text-[#1C1917] transition-colors">Home</Link>
+        <nav className="flex items-center space-x-2 text-xs text-[#6E5D53] mb-4 sm:mb-6">
+          <Link to="/" className="hover:text-[#241814] transition-colors">Home</Link>
           <span>/</span>
-          <span className="text-[#D81B60] font-medium">Menu</span>
+          <span className="text-[#9F1239] font-semibold">Menu</span>
         </nav>
 
         {/* Title & Metadata Lockup */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-stone-200">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-[rgba(212,163,70,0.25)]">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white border border-[#15803D]/25 text-[#15803D] text-[10px] font-semibold tracking-wider uppercase mb-2.5">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white border border-[#15803D]/25 text-[#15803D] text-[10px] font-semibold tracking-wider uppercase mb-2.5 shadow-2xs">
               <span className="w-1.5 h-1.5 rounded-full bg-[#15803D]" />
               <span>100% Pure Vegetarian &bull; Pure Desi Ghee</span>
             </div>
-            <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#1C1917]">
+            <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#241814]">
               The Culinary Repertoire
             </h1>
-            <p className="text-sm text-[#57534E] mt-2 leading-relaxed">
+            <p className="text-sm text-[#6E5D53] mt-2 leading-relaxed">
               Fine dine restaurant & rooftop cafe serving authentic North Indian cuisine, clay oven tandoori starters, sizzling specialties, and sweetcraft since 2001.
             </p>
           </div>
 
-          <div className="flex items-center space-x-3 px-4 py-3 rounded-2xl bg-white border border-[#C59B27]/25 shadow-2xs self-start md:self-auto">
+          <div className="flex items-center space-x-3 px-4 py-3 rounded-2xl bg-[#F4EFE6] border border-[rgba(212,163,70,0.3)] shadow-2xs self-start md:self-auto">
             <BrandLogo
               variant="crest"
               theme="light"
               size="md"
               className="w-10 h-10 shrink-0"
             />
-            <div className="flex flex-col border-l border-stone-200 pl-3">
-              <span className="text-xs font-serif font-bold text-[#1C1917]">
+            <div className="flex flex-col border-l border-[rgba(212,163,70,0.3)] pl-3">
+              <span className="text-xs font-serif font-bold text-[#241814]">
                 Dilliwasi Heritage
               </span>
-              <span className="text-[10px] text-[#C59B27] uppercase tracking-wider font-medium">
+              <span className="text-[10px] text-[#B38234] uppercase tracking-wider font-semibold">
                 Est. 2001 &bull; Outlet 2
               </span>
             </div>
@@ -97,9 +97,9 @@ export function MenuPage() {
         </div>
 
         {/* Sticky Minimalist Navigation Rail */}
-        <div className="sticky top-16 sm:top-20 z-30 bg-[#FAF8F5]/96 backdrop-blur-md pt-4 pb-3 border-b border-stone-200 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+        <div className="sticky top-16 sm:top-20 z-30 bg-[#FAF7F2]/96 backdrop-blur-md pt-4 pb-3 border-b border-[rgba(212,163,70,0.2)] -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
           
-          {/* Category Horizontal Scrolling Navigation Bar (Zero emojis) */}
+          {/* Category Horizontal Scrolling Navigation Bar */}
           <div
             ref={categoryScrollRef}
             className="flex items-center space-x-2 overflow-x-auto pb-2 scrollbar-none touch-pan-x"
@@ -113,14 +113,14 @@ export function MenuPage() {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-150 whitespace-nowrap cursor-pointer flex items-center space-x-1.5 shrink-0 select-none ${
                     isActive
-                      ? 'bg-[#1C1917] text-white shadow-2xs'
-                      : 'bg-white text-[#57534E] hover:text-[#1C1917] hover:bg-stone-50 border border-stone-200'
+                      ? 'bg-[#9F1239] text-[#FAF7F2] shadow-xs border border-[#9F1239]'
+                      : 'bg-white text-[#6E5D53] hover:text-[#241814] hover:bg-[#F4EFE6] border border-stone-200'
                   }`}
                 >
                   <span>{cat.label}</span>
                   <span
                     className={`ml-1 text-[10px] px-1.5 py-0.2 rounded-full ${
-                      isActive ? 'bg-white/20 text-white' : 'bg-stone-100 text-stone-500'
+                      isActive ? 'bg-[#D4A346] text-[#241814] font-bold' : 'bg-stone-100 text-[#6E5D53]'
                     }`}
                   >
                     {count}
@@ -133,14 +133,14 @@ export function MenuPage() {
           {/* Quick Filters & Minimalist Search Bar */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-3">
             
-            {/* Quick Filter Chips (Minimalist typography) */}
+            {/* Quick Filter Chips */}
             <div className="flex items-center space-x-2 overflow-x-auto pb-1 scrollbar-none">
               <button
                 onClick={() => setFilterType('all')}
                 className={`px-3 py-1 text-xs rounded-full border transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
                   filterType === 'all'
-                    ? 'bg-[#D81B60] text-white border-[#D81B60] font-medium'
-                    : 'bg-white text-[#57534E] border-stone-200 hover:border-stone-400'
+                    ? 'bg-[#9F1239] text-[#FAF7F2] border-[#9F1239] font-semibold'
+                    : 'bg-white text-[#6E5D53] border-stone-200 hover:border-stone-400'
                 }`}
               >
                 All ({menuDishes.length})
@@ -150,8 +150,8 @@ export function MenuPage() {
                 onClick={() => setFilterType('ghee')}
                 className={`px-3 py-1 text-xs rounded-full border transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
                   filterType === 'ghee'
-                    ? 'bg-[#C59B27] text-white border-[#C59B27] font-medium'
-                    : 'bg-white text-[#78716C] border-stone-200 hover:border-[#C59B27] hover:text-[#C59B27]'
+                    ? 'bg-[#B38234] text-white border-[#B38234] font-semibold'
+                    : 'bg-white text-[#6E5D53] border-stone-200 hover:border-[#B38234] hover:text-[#B38234]'
                 }`}
               >
                 Pure Desi Ghee
@@ -161,8 +161,8 @@ export function MenuPage() {
                 onClick={() => setFilterType('signature')}
                 className={`px-3 py-1 text-xs rounded-full border transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
                   filterType === 'signature'
-                    ? 'bg-[#1C1917] text-white border-[#1C1917] font-medium'
-                    : 'bg-white text-[#78716C] border-stone-200 hover:border-[#D81B60] hover:text-[#D81B60]'
+                    ? 'bg-[#9F1239] text-white border-[#9F1239] font-semibold'
+                    : 'bg-white text-[#6E5D53] border-stone-200 hover:border-[#9F1239] hover:text-[#9F1239]'
                 }`}
               >
                 Signature Reserve
@@ -172,8 +172,8 @@ export function MenuPage() {
                 onClick={() => setFilterType('under200')}
                 className={`px-3 py-1 text-xs rounded-full border transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 ${
                   filterType === 'under200'
-                    ? 'bg-[#15803D] text-white border-[#15803D] font-medium'
-                    : 'bg-white text-[#78716C] border-stone-200 hover:border-[#15803D] hover:text-[#15803D]'
+                    ? 'bg-[#15803D] text-white border-[#15803D] font-semibold'
+                    : 'bg-white text-[#6E5D53] border-stone-200 hover:border-[#15803D] hover:text-[#15803D]'
                 }`}
               >
                 Under ₹200
@@ -195,7 +195,7 @@ export function MenuPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search dish or ingredient..."
-                className="w-full pl-9 pr-7 py-1.5 text-xs bg-white border border-stone-200 rounded-full text-[#1C1917] placeholder-[#A8A29E] focus:outline-none focus:border-[#D81B60] transition-colors"
+                className="w-full pl-9 pr-7 py-1.5 text-xs bg-white border border-[rgba(212,163,70,0.3)] rounded-full text-[#241814] placeholder-[#9B897D] focus:outline-none focus:border-[#9F1239] transition-colors"
               />
               {searchQuery && (
                 <button
@@ -213,11 +213,11 @@ export function MenuPage() {
           </div>
 
           {/* Results Metadata */}
-          <div className="flex items-center justify-between text-[11px] text-[#78716C] pt-2 px-1">
+          <div className="flex items-center justify-between text-[11px] text-[#6E5D53] pt-2 px-1">
             <span>
-              Showing <strong className="text-[#1C1917] font-semibold">{filteredDishes.length}</strong> items
+              Showing <strong className="text-[#241814] font-semibold">{filteredDishes.length}</strong> items
               {activeCategory !== 'all' && (
-                <span> in <span className="text-[#D81B60] font-medium">{menuCategories.find(c => c.id === activeCategory)?.label}</span></span>
+                <span> in <span className="text-[#9F1239] font-bold">{menuCategories.find(c => c.id === activeCategory)?.label}</span></span>
               )}
             </span>
             {(activeCategory !== 'all' || filterType !== 'all' || searchQuery) && (
@@ -227,7 +227,7 @@ export function MenuPage() {
                   setFilterType('all');
                   setSearchQuery('');
                 }}
-                className="text-[#D81B60] font-medium hover:underline cursor-pointer"
+                className="text-[#9F1239] font-semibold hover:underline cursor-pointer"
               >
                 Reset filters
               </button>
@@ -236,12 +236,12 @@ export function MenuPage() {
 
         </div>
 
-        {/* Dish Catalog Grid: Minimalist, Fast-to-Scan & High-Legibility */}
+        {/* Dish Catalog Grid */}
         <div className="mt-8">
           {filteredDishes.length === 0 ? (
-            <div className="p-12 text-center bg-white rounded-2xl border border-stone-200 space-y-3">
-              <h2 className="font-serif text-xl font-bold text-[#1C1917]">No dishes match your criteria</h2>
-              <p className="text-xs text-[#78716C] max-w-sm mx-auto">
+            <div className="p-12 text-center bg-[#F4EFE6] rounded-2xl border border-[rgba(212,163,70,0.25)] space-y-3">
+              <h2 className="font-serif text-xl font-bold text-[#241814]">No dishes match your criteria</h2>
+              <p className="text-xs text-[#6E5D53] max-w-sm mx-auto">
                 Try resetting your search query or switching to another category.
               </p>
               <div className="pt-2">
@@ -263,25 +263,25 @@ export function MenuPage() {
               {filteredDishes.map((dish) => (
                 <article
                   key={dish.id}
-                  className="p-5 rounded-2xl bg-white border border-stone-200/90 shadow-2xs hover:border-[#D81B60]/35 hover:shadow-xs transition-all duration-200 flex flex-col justify-between group"
+                  className="p-5 rounded-2xl bg-white border border-[rgba(212,163,70,0.22)] shadow-2xs hover:border-[#9F1239]/40 hover:shadow-md transition-all duration-200 flex flex-col justify-between group"
                 >
                   <div>
                     {/* Header: Diet marker, category, price */}
                     <div className="flex items-center justify-between pb-2.5 border-b border-stone-100">
                       <div className="flex items-center space-x-2">
                         <DietaryMarker isVeg={true} />
-                        <span className="text-[10px] font-medium uppercase tracking-[0.14em] text-[#A8A29E]">
+                        <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#9B897D]">
                           {dish.category}
                         </span>
                       </div>
-                      <span className="font-serif text-lg font-bold text-[#1C1917]">
+                      <span className="font-serif text-lg font-bold text-[#241814]">
                         ₹{dish.price}
                       </span>
                     </div>
 
                     {/* Dish Title & Minimal Tags */}
                     <div className="mt-3 space-y-1.5">
-                      <h3 className="font-serif text-lg font-bold text-[#1C1917] leading-snug group-hover:text-[#D81B60] transition-colors">
+                      <h3 className="font-serif text-lg font-bold text-[#241814] leading-snug group-hover:text-[#9F1239] transition-colors">
                         {dish.name}
                       </h3>
 
@@ -290,12 +290,12 @@ export function MenuPage() {
                         {dish.isSignature && <ChefSpecialBadge />}
                       </div>
 
-                      <p className="text-xs text-[#57534E] leading-relaxed pt-1 font-light">
+                      <p className="text-xs text-[#6E5D53] leading-relaxed pt-1 font-light">
                         {dish.description}
                       </p>
 
                       {dish.accompaniment && (
-                        <p className="text-[11px] text-[#A8A29E] italic">
+                        <p className="text-[11px] text-[#9B897D] italic">
                           &bull; {dish.accompaniment}
                         </p>
                       )}
@@ -309,7 +309,7 @@ export function MenuPage() {
                     </span>
                     <a
                       href={`tel:${restaurantInfo.phone.replace(/[^0-9+]/g, '')}`}
-                      className="text-xs font-medium text-[#D81B60] hover:text-[#1C1917] transition-colors inline-flex items-center space-x-1"
+                      className="text-xs font-semibold text-[#9F1239] hover:text-[#B38234] transition-colors inline-flex items-center space-x-1"
                     >
                       <span>Order</span>
                       <span>&rarr;</span>
@@ -321,16 +321,16 @@ export function MenuPage() {
           )}
         </div>
 
-        {/* Minimalist Ordering Hotline Banner */}
-        <div className="mt-16 p-6 sm:p-8 rounded-3xl bg-[#180308] text-white border border-[#C59B27]/25 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* Royal Burgundy Ordering Hotline Banner */}
+        <div className="mt-16 p-6 sm:p-8 rounded-3xl bg-[#2A050C] text-[#FAF7F2] border border-[#D4A346]/30 shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1.5 text-center md:text-left">
-            <span className="text-[10px] uppercase tracking-[0.2em] text-[#C59B27] font-semibold block">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-[#D4A346] font-semibold block">
               Pure Desi Ghee &bull; Fine Dine & Rooftop
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold">
               Relish authentic Dilliwasi flavours
             </h2>
-            <p className="text-xs text-stone-300 max-w-lg">
+            <p className="text-xs text-stone-300 max-w-lg font-light">
               Visit us at Amar Complex, Shivalik Nagar, Haridwar or call ahead for quick dining and pickup inquiries.
             </p>
           </div>
@@ -338,7 +338,7 @@ export function MenuPage() {
           <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full sm:w-auto">
             <a
               href="tel:+919058882691"
-              className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#D81B60] text-white font-medium text-xs uppercase tracking-widest hover:bg-[#C2185B] transition-colors text-center inline-flex items-center justify-center space-x-2"
+              className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#D4A346] text-[#241814] font-bold text-xs uppercase tracking-widest hover:bg-[#E8C066] transition-colors text-center inline-flex items-center justify-center space-x-2"
             >
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

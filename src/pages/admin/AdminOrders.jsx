@@ -42,9 +42,9 @@ export function AdminOrders() {
       label: '2. In Preparation',
       icon: '02',
       sla: 'SLA 12–15m',
-      badgeColor: 'bg-[#D81B60]/10 text-[#D81B60] border border-[#D81B60]/30',
+      badgeColor: 'bg-[#9F1239]/10 text-[#9F1239] border border-[#9F1239]/30',
       actionLabel: 'Mark Plated →',
-      actionClass: 'bg-[#D81B60] hover:bg-[#C2185B] text-white',
+      actionClass: 'bg-[#9F1239] hover:bg-[#881337] text-white',
     },
     {
       id: 'ready',
