@@ -202,7 +202,7 @@ export function AdminReviews() {
               <div className="mt-3 p-3.5 rounded-lg bg-[rgba(212,163,70,0.08)] border-l-2 border-[#D4A346] space-y-1">
                 <div className="flex items-center justify-between">
                   <span className="text-[11px] font-semibold text-[#D4A346] uppercase tracking-wider">
-                    Sanchi Maître d' Response
+                    Dilliwasi Management Response
                   </span>
                   <span className="text-[10px] text-gray-400">{rev.repliedAt}</span>
                 </div>

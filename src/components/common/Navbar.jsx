@@ -47,8 +47,8 @@ export function Navbar({ onOpenReserve: _onOpenReserve } = {}) {
     >
       <div className="max-w-[1400px] mx-auto px-5 sm:px-8 flex items-center justify-between">
         
-        {/* Brand Logo & Wordmark (Vector-Crisp Sanchi Identity) */}
-        <Link to="/" className="group flex items-center" aria-label="Sanchi Restaurant Home">
+        {/* Brand Logo & Wordmark (Dilliwasi Identity) */}
+        <Link to="/" className="group flex items-center" aria-label="Dilliwasi Fine Dine & Rooftop Cafe Home">
           <BrandLogo
             variant="horizontal"
             theme={isScrolled ? 'dark' : 'light'}

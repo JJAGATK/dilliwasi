@@ -14,7 +14,7 @@ export function DigitalPassModal({ reservation, onClose }) {
 
   if (!reservation) return null;
 
-  const smsText = `Sanchi Heritage Dining Pass [${reservation.id}]: Table confirmed for ${reservation.guestName} (${reservation.partySize} Guests) on ${reservation.date} at ${reservation.time}. Location: 42 Heritage Promenade, Civil Lines, Bhopal. Concierge: +91 755 248 9100.`;
+  const smsText = `Dilliwasi Dining Pass [${reservation.id}]: Table confirmed for ${reservation.guestName} (${reservation.partySize} Guests) on ${reservation.date} at ${reservation.time}. Location: Amar Complex, Shivalik Nagar, Haridwar. Hotline: +91 90588 82691.`;
 
   const handleCopySMS = () => {
     navigator.clipboard?.writeText(smsText);
@@ -44,7 +44,7 @@ export function DigitalPassModal({ reservation, onClose }) {
           <div className="flex items-center space-x-3">
             <BrandLogo variant="crest" theme="dark" size="sm" className="w-8 h-8 shrink-0" />
             <div>
-              <span className="font-serif text-base sm:text-lg font-bold tracking-tight block text-white">SANCHI</span>
+              <span className="font-serif text-base sm:text-lg font-bold tracking-tight block text-white">DILLIWASI</span>
               <span className="text-[9px] uppercase tracking-[0.2em] text-[#D4A346] -mt-1 block font-bold">
                 Digital Dining Pass
               </span>
@@ -147,13 +147,13 @@ export function DigitalPassModal({ reservation, onClose }) {
               </svg>
             </div>
             <span className="text-[11px] text-[#F5DEB3] mt-2 font-medium">
-              Scan at Sanchi Courtyard Entrance
+              Present at Dilliwasi Reception / Rooftop
             </span>
           </div>
 
           {/* Ticket Stub Note */}
           <div className="pt-2 text-center text-[10px] text-[#C7B8AA] border-t border-dashed border-[rgba(212,163,70,0.25)]">
-            Tables held for 15 minutes &bull; 42 Heritage Promenade, Bhopal
+            Amar Complex, Shivalik Nagar, Haridwar &bull; +91 90588 82691
           </div>
 
         </div>

@@ -349,7 +349,7 @@ export function ReservePage({ onAddReservation }) {
                     </label>
                     <input
                       type="email"
-                      placeholder="patron@sanchi.dining"
+                      placeholder="guest@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       className={`w-full px-3.5 py-2.5 rounded-lg bg-[#FAF7F2]/70 border text-sm focus:bg-white focus:outline-none transition-colors shadow-2xs ${
@@ -425,7 +425,7 @@ export function ReservePage({ onAddReservation }) {
               <div className="absolute top-0 right-0 w-36 h-36 bg-[#D4A346]/5 rounded-full blur-2xl pointer-events-none" />
 
               <div className="flex items-center justify-between border-b border-[rgba(212,163,70,0.18)] pb-4 relative z-10">
-                <span className="label-caps text-[#D4A346] text-xs font-semibold tracking-wider">The Sanchi Table Promise</span>
+                <span className="label-caps text-[#D4A346] text-xs font-semibold tracking-wider">The Dilliwasi Table Promise</span>
                 <BrandLogo
                   variant="crest"
                   theme="gold"
@@ -439,7 +439,7 @@ export function ReservePage({ onAddReservation }) {
               </h3>
 
               <p className="text-xs text-[#E5DCD3] leading-relaxed relative z-10">
-                At Sanchi, we never double-seat or rush your degustation. Whether you linger over saffron kahwa for three hours or savor quiet silence, your table remains exclusively yours.
+                At Dilliwasi, we never rush your dining experience. Whether you linger over rooftop mocktails or savor our Royal Thali with family, our warm hospitality ensures an unforgettable time.
               </p>
 
               <div className="border-t border-[rgba(212,163,70,0.18)] pt-4 space-y-3 text-xs text-[#FAF7F2] relative z-10">

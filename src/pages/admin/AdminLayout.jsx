@@ -28,7 +28,7 @@ export function AdminLayout({ children }) {
               className="w-9 h-9 transition-transform duration-300 group-hover:scale-105"
             />
             <div className="flex flex-col">
-              <span className="font-serif text-lg font-bold tracking-tight text-[#1C1917]">SANCHI</span>
+              <span className="font-serif text-lg font-bold tracking-tight text-[#1C1917]">DILLIWASI</span>
               <span className="text-[9px] uppercase tracking-[0.2em] text-[#A37424] -mt-1 font-bold">
                 Maître d' Console
               </span>

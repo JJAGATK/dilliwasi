@@ -10,36 +10,34 @@ export const translations = {
       story: "Our Story",
       gallery: "Gallery",
       contact: "Contact",
-      reserve: "Reserve a Table",
-      dashboard: "Dashboard",
     },
     hero: {
-      kicker: "Heritage Flavours • 3rd Century BCE Roots",
-      line1: "Take a taste.",
-      line2: "Come join us.",
-      line3: "Life is so endlessly delicious.",
-      desc: "Inspired by the sacred Stupa of Sanchi. We celebrate authentic Awadhi slow-cooking, woodsmoke embers, and stone-ground royal spices.",
+      kicker: "100% Pure Vegetarian • Pure Desi Ghee Delights",
+      line1: "Relish the Tradition.",
+      line2: "Fine Dine & Rooftop.",
+      line3: "Pure Desi Ghee Delights.",
+      desc: "Welcome to Dilliwasi — Haridwar's premier fine dining destination and rooftop cafe since 2001. Relish the timeless taste of authentic North Indian delicacies crafted with pure desi ghee, clay tandoors, and royal spices.",
       ctaPrimary: "Explore Menu",
-      ctaSecondary: "Reserve a Table",
-      copperDum: "12-Hour Copper Deg Dum",
-      stoneSpices: "Stone-Ground Whole Spices",
-      clayTandoor: "Live Clay Oven Embers",
+      ctaSecondary: "Our Story",
+      copperDum: "Slow-simmered in rich pure desi ghee",
+      stoneSpices: "100% Pure Veg kitchen with fresh ingredients",
+      clayTandoor: "Panoramic rooftop dining in Haridwar",
     },
     sections: {
-      repertoireKicker: "Crafted Over Embers",
-      repertoireTitle: "Signature Culinary Repertoire",
+      repertoireKicker: "Pure Desi Ghee Delights",
+      repertoireTitle: "Dilliwasi Signature Repertoire",
       viewFullMenu: "View Full Menu",
-      howWeCookTitle: "How We Cook",
-      howWeCookDesc: "Real techniques refined across centuries. No shortcuts, no artificial emulsifiers, no microwave quick-fires.",
-      visitTitle: "Join us for an evening of quiet culinary majesty.",
-      visitDesc: "We host only 24 tables each evening to ensure every deg receives the personal attention of our master ustad.",
+      howWeCookTitle: "Our Culinary Philosophy",
+      howWeCookDesc: "Authentic recipes refined since 2001. Prepared exclusively with pure desi ghee, fresh whole spices, and zero compromise on purity.",
+      visitTitle: "Experience fine dine & open-air rooftop dining.",
+      visitDesc: "Located at Amar Complex, Shivalik Nagar, Haridwar. Warm family hospitality, rooftop ambiance, and unforgettable vegetarian cuisine.",
     },
     footer: {
-      hours: "Sanctuary Hours",
-      lunch: "Afternoon Lunch: 12:00 PM – 3:30 PM",
-      dinner: "Evening Degustation: 7:00 PM – 11:30 PM",
-      location: "42 Heritage Promenade, Civil Lines, Bhopal",
-      rights: "Sanchi Heritage Gastronomy. All rights reserved.",
+      hours: "Restaurant Hours",
+      lunch: "Morning & Lunch: 11:00 AM – 4:00 PM",
+      dinner: "Evening & Dinner: 6:30 PM – 11:00 PM",
+      location: "Outlet 2: 3rd - 4th Floor, A3 Amar Complex (Opp. ICICI Bank), Shivalik Nagar, Haridwar",
+      rights: "Dilliwasi Fine Dine Restaurant & Rooftop Cafe. All rights reserved.",
     }
   },
   hi: {
@@ -49,48 +47,46 @@ export const translations = {
       story: "हमारी गाथा",
       gallery: "चित्र दीर्घा",
       contact: "सम्पर्क",
-      reserve: "मेज आरक्षित करें",
-      dashboard: "प्रबंधन",
     },
     hero: {
-      kicker: "विरासत के स्वाद • सांची स्तूप परंपरा",
-      line1: "स्वाद चखें।",
-      line2: "हमारे संग पधारें।",
-      line3: "जीवन अनंत रूप से स्वादिष्ट है।",
-      desc: "सांची के पवित्र स्तूप से प्रेरित। प्राचीन अवधी दम पुख्त, धीमी आंच की हांडी और पत्थर पर पिसे शाही मसालों की अनूठी साधना।",
+      kicker: "१००% शुद्ध शाकाहारी • शुद्ध देसी घी के स्वाद",
+      line1: "परंपरा का स्वाद लें।",
+      line2: "फ़ाइन डाइन व रूफ़टॉप।",
+      line3: "शुद्ध देसी घी के लज़ीज़ व्यंजन।",
+      desc: "दिल्लीवासी में आपका स्वागत है — हरिद्वार का प्रतिष्ठित १००% शुद्ध शाकाहारी फ़ाइन डाइन रेस्तरां और रूफ़टॉप कैफ़े (स्थापना २००१)। शुद्ध देसी घी, मिट्टी के तंदूर और पारंपरिक मसालों से सजे अनूठे स्वाद।",
       ctaPrimary: "व्यंजन देखें",
-      ctaSecondary: "मेज आरक्षित करें",
-      copperDum: "१२ घंटे तांबे की देग में दम",
-      stoneSpices: "सिलबट्टे पर पिसे मसाले",
-      clayTandoor: "मिट्टी के तंदूर की आंच",
+      ctaSecondary: "हमारी गाथा",
+      copperDum: "शुद्ध देसी घी में धीमी आंच पर पके व्यंजन",
+      stoneSpices: "१००% शुद्ध शाकाहारी व ताज़ी सामग्री",
+      clayTandoor: "हरिद्वार में मनमोहक रूफ़टॉप डाइनिंग",
     },
     sections: {
-      repertoireKicker: "अंगारों पर पकी साधना",
-      repertoireTitle: "शाही व्यंजन संग्रह",
+      repertoireKicker: "शुद्ध देसी घी के स्वाद",
+      repertoireTitle: "दिल्लीवासी विशेष व्यंजन",
       viewFullMenu: "सम्पूर्ण सूची देखें",
-      howWeCookTitle: "हमारी पाक कला",
-      howWeCookDesc: "शताब्दियों पुरानी शुद्ध परंपरा। कोई कृत्रिम रंग नहीं, केवल धीमी आंच का धैर्य।",
-      visitTitle: "शांत गरिमा और शाही आतिथ्य का आनंद लें।",
-      visitDesc: "प्रत्येक संध्या केवल २४ मेजों की सेवा, ताकि हर व्यंजन को उस्ताद का पूरा ध्यान मिल सके।",
+      howWeCookTitle: "हमारी पाक साधना",
+      howWeCookDesc: "वर्ष २००१ से लगातार शुद्धता और प्रामाणिक स्वाद की परंपरा। शुद्ध देसी घी और ताज़े मसालों का अनूठा संगम।",
+      visitTitle: "शांत गरिमा और रूफ़टॉप आतिथ्य का आनंद लें।",
+      visitDesc: "अमर कॉम्प्लेक्स, शिवालिक नगर, हरिद्वार। पारिवारिक माहौल, खुली हवादार रूफ़टॉप और लाजवाब शाकाहारी भोजन।",
     },
     footer: {
       hours: "भोजन समय",
-      lunch: "दोपहर: १२:०० से ३:३०",
-      dinner: "रात्रि भोज: ७:०० से ११:३०",
-      location: "४२ हेरिटेज प्रोमेनेड, सिविल लाइन्स, भोपाल",
-      rights: "सांची हेरिटेज गैस्ट्रोनॉमी। सर्वाधिकार सुरक्षित।",
+      lunch: "दोपहर: ११:०० से ४:००",
+      dinner: "रात्रि: ६:३० से ११:००",
+      location: "आउटलेट २: तृतीय-चतुर्थ तल, ए३ अमर कॉम्प्लेक्स, शिवालिक नगर, हरिद्वार",
+      rights: "दिल्लीवासी फ़ाइन डाइन रेस्तरां एवं रूफ़टॉप कैफ़े। सर्वाधिकार सुरक्षित।",
     }
   }
 };
 
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState(() => {
-    const saved = localStorage.getItem('sanchi_lang');
+    const saved = localStorage.getItem('dilliwasi_lang');
     return (saved === 'hi') ? 'hi' : 'en';
   });
 
   useEffect(() => {
-    localStorage.setItem('sanchi_lang', lang);
+    localStorage.setItem('dilliwasi_lang', lang);
   }, [lang]);
 
   const t = translations[lang] || translations.en;
@@ -103,8 +99,9 @@ export function LanguageProvider({ children }) {
 }
 
 export function useLanguage() {
-  const ctx = useContext(LanguageContext);
-  if (!ctx) throw new Error('useLanguage must be used within LanguageProvider');
-  return ctx;
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
 }
-

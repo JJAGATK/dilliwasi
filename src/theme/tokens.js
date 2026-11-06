@@ -1,11 +1,16 @@
 /**
- * Sanchi Semantic Design Tokens
- * Extracted directly from the brand logo (#2A050C burgundy & #D4A346 antique brass)
+ * Dilliwasi Semantic Design Tokens
+ * Harmonized with the royal DW emblem (#E60067 magenta, #2A050C royal burgundy, #D4A346 antique brass gold, #16A34A pure veg green)
  * Single Source of Truth for all components.
  */
 
 export const tokens = {
   colors: {
+    // Brand Specific
+    brandMagenta: '#E60067',
+    brandCrimson: '#2A050C',
+    brandGold: '#D4A346',
+
     // Light Canvas System (Public Default & Admin Light)
     canvas: '#FAF7F2',        // Warm antique parchment surface
     surface: '#F4EFE6',       // Sandstone container fill
@@ -19,8 +24,8 @@ export const tokens = {
     surfaceHoverDark: '#4A0C1A',
 
     // Typography & Ink
-    inkPrimary: '#241814',    // Deep roasted umber (WCAG AAA 13.8:1 on canvas)
-    inkSecondary: '#6E5D53',  // Warm stone taupe (WCAG AA 5.2:1)
+    inkPrimary: '#241814',    // Deep roasted umber
+    inkSecondary: '#6E5D53',  // Warm stone taupe
     inkMuted: '#9B897D',      // Subdued metadata
     
     // Dark Mode Inks
@@ -33,19 +38,20 @@ export const tokens = {
     accentLight: '#E8C066',
     accentDark: '#B38234',
     accentGlow: 'rgba(212, 163, 70, 0.18)',
+    magentaGlow: 'rgba(230, 0, 103, 0.18)',
 
     // Borders
     borderSubtle: 'rgba(212, 163, 70, 0.22)',
     borderStrong: 'rgba(110, 93, 83, 0.35)',
     borderDark: 'rgba(232, 192, 102, 0.20)',
 
-    // Dietary & Status Indicators
-    veg: '#2E7D32',           // Forest Green (Vegetarian)
-    nonVeg: '#C62828',        // Heritage Madder (Non-Vegetarian)
-    spice: '#D84315',         // Saffron Cayenne
-    success: '#2E7D32',
+    // Dietary & Status Indicators (100% Pure Veg)
+    veg: '#16A34A',           // Vibrant Pure Vegetarian Green
+    pureGhee: '#D97706',      // Golden Desi Ghee
+    spice: '#EA580C',         // Saffron Chilli
+    success: '#16A34A',
     warning: '#D4A346',
-    danger: '#C62828',
+    danger: '#E60067',
     info: '#5D4037',
   },
 

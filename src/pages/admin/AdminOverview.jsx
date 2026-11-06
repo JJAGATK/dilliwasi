@@ -161,13 +161,13 @@ export function AdminOverview() {
     { label: 'Artisanal Sweetcraft', percent: 8, revenue: '₹ 14,790', color: '#E8C066' },
   ];
 
-  // Top Ranked Repertoire Dishes
+  // Top Ranked Repertoire Dishes (100% Pure Veg)
   const allRankedDishes = useMemo(() => [
-    { name: 'Nalli Nihari Khaas', category: 'curries', catLabel: 'Royal Curries', portions: 48, revenue: '₹ 42,720', margin: '74%' },
-    { name: 'Dal Sanchi 1928', category: 'curries', catLabel: 'Overnight Deg', portions: 56, revenue: '₹ 29,120', margin: '82%' },
-    { name: 'Kakori Galawat Kebab', category: 'tandoor', catLabel: 'Clay Embers', portions: 41, revenue: '₹ 27,880', margin: '68%' },
-    { name: 'Dum Pukht Gosht Biryani', category: 'biryani', catLabel: 'Awadhi Basmati', portions: 32, revenue: '₹ 26,240', margin: '71%' },
-    { name: 'Shahi Tukda Saffron Cloud', category: 'meetha', catLabel: 'Artisanal Meetha', portions: 28, revenue: '₹ 12,600', margin: '85%' },
+    { name: 'Dilliwasi Royal Thali', category: 'combos', catLabel: 'Royal Combos', portions: 64, revenue: '₹ 48,150', margin: '76%' },
+    { name: 'Black Dairy Dal (Dal Makhani)', category: 'curries', catLabel: 'Pure Desi Ghee', portions: 58, revenue: '₹ 32,480', margin: '84%' },
+    { name: 'Paneer Malai Tikka', category: 'tandoor', catLabel: 'Clay Embers', portions: 46, revenue: '₹ 29,900', margin: '72%' },
+    { name: 'Veg Hyderabadi Dum Biryani', category: 'biryani', catLabel: 'Dum Basmati', portions: 36, revenue: '₹ 24,210', margin: '75%' },
+    { name: 'Warm Gulab Jamun', category: 'meetha', catLabel: 'Desi Ghee Meetha', portions: 30, revenue: '₹ 13,500', margin: '86%' },
   ], []);
 
   const displayedRankedDishes = useMemo(() => {

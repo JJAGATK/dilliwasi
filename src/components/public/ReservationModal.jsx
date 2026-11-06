@@ -162,7 +162,7 @@ export function ReservationModal({ isOpen, onClose, onAddReservation }) {
                   Reserve Your Dining Table
                 </h2>
                 <p className="text-[11px] uppercase tracking-[0.16em] text-[#D4A346]">
-                  Sanchi Heritage Hospitality
+                  Dilliwasi Pure Veg Hospitality
                 </p>
               </div>
             </div>
@@ -404,9 +404,9 @@ export function ReservationModal({ isOpen, onClose, onAddReservation }) {
                           value={customMenu.main}
                           onChange={(e) => setCustomMenu({ ...customMenu, main: e.target.value })}
                           options={[
-                            'Nalli Nihari Khaas (12-hour shank in copper deg)',
-                            'Dal Sanchi 1928 (Overnight woodsmoke black urad)',
-                            'Kashmiri Nadru Yakhni (Lotus root in mint yogurt)',
+                            'Paneer Labaabdaar (Rich creamy gravy in pure desi ghee)',
+                            'Black Dairy Dal (Overnight 16-hr simmered Dal Makhani)',
+                            'Sabz Diwani Handi (Seasonal vegetables in clay handi)',
                           ]}
                           className="py-1 text-xs bg-white border-[rgba(212,163,70,0.3)]"
                         />

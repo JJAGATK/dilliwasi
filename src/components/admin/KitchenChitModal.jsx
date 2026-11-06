@@ -21,15 +21,15 @@ export function KitchenChitModal({ order, onClose }) {
           {/* Header */}
           <div className="text-center border-b border-dashed border-gray-400 pb-3 flex flex-col items-center">
             <img
-              src="/assets/logo-crest-light.png"
-              alt="Sanchi Crest"
-              className="h-7 w-auto object-contain mb-1.5 grayscale contrast-125"
+              src="/assets/dw-logo.jpg"
+              alt="Dilliwasi DW Monogram"
+              className="h-8 w-8 rounded-full object-contain mb-1.5"
             />
             <h2 className="font-serif text-lg font-bold tracking-wider text-black">
-              SANCHI HERITAGE DINING
+              DILLIWASI FINE DINE & ROOFTOP
             </h2>
             <p className="text-[10px] text-gray-600 uppercase tracking-widest">
-              Kitchen Display Chit &bull; Bhopal
+              Kitchen Display Chit &bull; Shivalik Nagar Haridwar
             </p>
             <p className="text-[10px] text-gray-500 mt-1">
               {new Date().toLocaleDateString('en-IN', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' })}

@@ -18,21 +18,21 @@ export function Router({ children }) {
 
   useEffect(() => {
     const titles = {
-      '/': 'Sanchi | Heritage Indian Fine Dining',
-      '/menu': 'The Sanchi Tasting Menu | Classical Repertoire',
-      '/story': 'Our Provenance & Story | 3rd Century BCE Roots',
-      '/gallery': 'Sanctuary Gallery & Craft Archive | Sanchi Dining',
-      '/reserve': 'Reserve a Table & Degustation Suite | Sanchi Dining',
-      '/contact': 'Sanctuary Concierge & Location | Sanchi Dining',
-      '/admin': 'Sanchi Admin | Operations Suite',
-      '/admin/floorplan': 'Sanchi Admin | Interactive Floor Plan',
-      '/admin/reservations': 'Sanchi Admin | Table Reservations',
-      '/admin/menu': 'Sanchi Admin | Menu Management',
-      '/admin/orders': 'Sanchi Admin | Kitchen Display System (KDS)',
-      '/admin/reviews': 'Sanchi Admin | Guest Feedback',
-      '/admin/settings': 'Sanchi Admin | Sanctuary Settings',
+      '/': 'Dilliwasi | 100% Pure Veg Fine Dine & Rooftop Cafe | Since 2001',
+      '/menu': 'Dilliwasi Menu | Pure Desi Ghee Vegetarian Delights',
+      '/story': 'Our Story & Provenance | Dilliwasi Est. 2001',
+      '/gallery': 'Visual Archive & Rooftop Gallery | Dilliwasi Haridwar',
+      '/reserve': 'Visit Dilliwasi | Fine Dine & Rooftop Cafe',
+      '/contact': 'Location & Hotlines | Dilliwasi Amar Complex Haridwar',
+      '/admin': 'Dilliwasi Admin | Operations Suite',
+      '/admin/floorplan': 'Dilliwasi Admin | Interactive Floor Plan',
+      '/admin/reservations': 'Dilliwasi Admin | Dining Management',
+      '/admin/menu': 'Dilliwasi Admin | Menu Management',
+      '/admin/orders': 'Dilliwasi Admin | Kitchen Display System (KDS)',
+      '/admin/reviews': 'Dilliwasi Admin | Guest Feedback',
+      '/admin/settings': 'Dilliwasi Admin | Outlet Settings',
     };
-    document.title = titles[currentPath] || 'Sanchi | Authentic Indian Dining';
+    document.title = titles[currentPath] || 'Dilliwasi | 100% Pure Veg Dining';
   }, [currentPath]);
 
   const navigate = useCallback((to, { replace = false } = {}) => {
