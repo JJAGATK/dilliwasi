@@ -58,23 +58,23 @@ export function MenuPage() {
   }, [activeCategory, filterType, searchQuery]);
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] text-[#241814] pt-24 sm:pt-28 pb-24 relative overflow-hidden">
+    <div className="min-h-screen bg-[#FAF7F2] text-[#241814] pt-20 sm:pt-28 pb-24 relative overflow-x-hidden max-w-full w-full">
       {/* Background Architectural & Culinary Drawings Watermarks */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none max-w-full" aria-hidden="true">
         {/* Scalloped Arch behind header */}
-        <div className="absolute top-8 left-1/2 -translate-x-1/2 w-[720px] text-[#C59B27] opacity-[0.05] sm:opacity-[0.07]">
+        <div className="absolute top-8 left-1/2 -translate-x-1/2 w-[340px] sm:w-[580px] lg:w-[720px] text-[#C59B27] opacity-[0.05] sm:opacity-[0.07]">
           <DelhiMehrabArchDrawing className="w-full h-auto" />
         </div>
         {/* Botanical Spices on left margin */}
-        <div className="absolute top-[680px] -left-12 w-[340px] text-[#C59B27] opacity-[0.05] sm:opacity-[0.07]">
+        <div className="absolute top-[680px] -left-8 sm:-left-12 w-[200px] sm:w-[300px] lg:w-[340px] text-[#C59B27] opacity-[0.05] sm:opacity-[0.07]">
           <BotanicalSpicesDrawing className="w-full h-auto" />
         </div>
         {/* Desi Ghee Handi on right margin */}
-        <div className="absolute top-[1380px] -right-12 w-[340px] text-[#C59B27] opacity-[0.05] sm:opacity-[0.07]">
+        <div className="absolute top-[1380px] -right-8 sm:-right-12 w-[200px] sm:w-[300px] lg:w-[340px] text-[#C59B27] opacity-[0.05] sm:opacity-[0.07]">
           <DesiGheeHandiDrawing className="w-full h-auto" />
         </div>
         {/* Lotus Medallion near bottom */}
-        <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[480px] text-[#C59B27] opacity-[0.04]">
+        <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[300px] sm:w-[480px] text-[#C59B27] opacity-[0.04]">
           <RoyalPadmaMandalaDrawing className="w-full h-auto" />
         </div>
       </div>
@@ -123,7 +123,7 @@ export function MenuPage() {
         </div>
 
         {/* Sticky Minimalist Navigation Rail */}
-        <div className="sticky top-16 sm:top-20 z-30 bg-[#FAF7F2]/96 backdrop-blur-md pt-4 pb-3 border-b border-[rgba(212,163,70,0.2)] -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+        <div className="sticky top-[56px] sm:top-[68px] z-30 bg-[#FAF7F2]/98 backdrop-blur-md pt-3 sm:pt-4 pb-2.5 sm:pb-3 border-b border-[rgba(212,163,70,0.2)] -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
           
           {/* Category Horizontal Scrolling Navigation Bar */}
           <div
@@ -221,7 +221,7 @@ export function MenuPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search dish or ingredient..."
-                className="w-full pl-9 pr-7 py-1.5 text-xs bg-white border border-[rgba(212,163,70,0.3)] rounded-full text-[#241814] placeholder-[#9B897D] focus:outline-none focus:border-[#9F1239] transition-colors"
+                className="w-full pl-9 pr-7 py-2 sm:py-1.5 text-base sm:text-xs bg-white border border-[rgba(212,163,70,0.3)] rounded-full text-[#241814] placeholder-[#9B897D] focus:outline-none focus:border-[#9F1239] transition-colors"
               />
               {searchQuery && (
                 <button

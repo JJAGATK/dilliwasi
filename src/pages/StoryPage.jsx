@@ -14,34 +14,34 @@ import { ourSixCharms } from '../data/mockData';
 
 export function StoryPage() {
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-[#1C1917] pt-24 sm:pt-28 pb-24 relative overflow-hidden select-none-text">
+    <div className="min-h-screen bg-[#FAF8F5] text-[#1C1917] pt-20 sm:pt-28 pb-20 sm:pb-24 relative overflow-x-hidden max-w-full w-full">
       
       {/* ========================================================================= */}
       {/* Page-Wide Architectural Line-Art Watermarks (Subtle, regal, non-intrusive) */}
       {/* ========================================================================= */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none max-w-full" aria-hidden="true">
         {/* 1. Grand Delhi Mehrab Scalloped Arch behind Hero */}
-        <div className="absolute top-8 left-1/2 -translate-x-1/2 w-[680px] sm:w-[860px] text-[#C59B27] opacity-[0.08] sm:opacity-[0.11]">
+        <div className="absolute top-8 left-1/2 -translate-x-1/2 w-[340px] sm:w-[600px] lg:w-[860px] text-[#C59B27] opacity-[0.08] sm:opacity-[0.11]">
           <DelhiMehrabArchDrawing className="w-full h-auto" />
         </div>
 
         {/* 2. Haridwar Rooftop Chhatri Pavilion along left margin */}
-        <div className="absolute top-[580px] -left-12 sm:-left-8 w-[340px] lg:w-[440px] text-[#C59B27] opacity-[0.09] lg:opacity-[0.12] transform -rotate-3">
+        <div className="absolute top-[580px] -left-8 sm:-left-6 w-[200px] sm:w-[320px] lg:w-[440px] text-[#C59B27] opacity-[0.08] lg:opacity-[0.12] transform -rotate-3">
           <RooftopPavilionDrawing className="w-full h-auto" />
         </div>
 
         {/* 3. Simmering Desi Ghee Handi along right margin */}
-        <div className="absolute top-[1080px] -right-12 sm:-right-8 w-[320px] lg:w-[420px] text-[#C59B27] opacity-[0.10] lg:opacity-[0.13] transform rotate-3">
+        <div className="absolute top-[1080px] -right-8 sm:-right-6 w-[200px] sm:w-[300px] lg:w-[420px] text-[#C59B27] opacity-[0.09] lg:opacity-[0.13] transform rotate-3">
           <DesiGheeHandiDrawing className="w-full h-auto" />
         </div>
 
         {/* 4. Whole Botanical Spices along left margin */}
-        <div className="absolute top-[1620px] -left-10 w-[300px] lg:w-[380px] text-[#C59B27] opacity-[0.08] lg:opacity-[0.10]">
+        <div className="absolute top-[1620px] -left-8 w-[200px] sm:w-[280px] lg:w-[380px] text-[#C59B27] opacity-[0.08] lg:opacity-[0.10]">
           <BotanicalSpicesDrawing className="w-full h-auto" />
         </div>
 
         {/* 5. Royal Padma Mandala near bottom call-to-action */}
-        <div className="absolute -bottom-24 left-1/2 -translate-x-1/2 w-[560px] text-[#C59B27] opacity-[0.06]">
+        <div className="absolute -bottom-24 left-1/2 -translate-x-1/2 w-[320px] sm:w-[560px] text-[#C59B27] opacity-[0.06]">
           <RoyalPadmaMandalaDrawing className="w-full h-auto" />
         </div>
       </div>

@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-[#180308] text-[#FAF8F5] border-t border-[#C59B27]/25 relative overflow-hidden">
       {/* Subtle Nocturnal Scalloped Arch Watermark */}
-      <div className="absolute -top-12 -right-16 w-[420px] text-[#C59B27] opacity-[0.04] pointer-events-none select-none" aria-hidden="true">
+      <div className="absolute -top-12 -right-8 sm:-right-16 w-[260px] sm:w-[420px] text-[#C59B27] opacity-[0.04] pointer-events-none select-none max-w-full overflow-hidden" aria-hidden="true">
         <DelhiMehrabArchDrawing className="w-full h-auto" />
       </div>
 

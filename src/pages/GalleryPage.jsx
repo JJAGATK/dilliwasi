@@ -27,16 +27,16 @@ export function GalleryPage() {
   });
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] text-[#241814] pt-24 sm:pt-28 pb-24 relative overflow-hidden">
+    <div className="min-h-screen bg-[#FAF7F2] text-[#241814] pt-20 sm:pt-28 pb-20 sm:pb-24 relative overflow-x-hidden max-w-full w-full">
       {/* Background Architectural Drawings Watermarks */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none" aria-hidden="true">
-        <div className="absolute top-12 right-10 w-[420px] text-[#C59B27] opacity-[0.06]">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none max-w-full" aria-hidden="true">
+        <div className="absolute top-12 -right-8 sm:right-10 w-[240px] sm:w-[420px] text-[#C59B27] opacity-[0.06]">
           <RooftopPavilionDrawing className="w-full h-auto" />
         </div>
-        <div className="absolute top-[680px] -left-16 w-[440px] text-[#C59B27] opacity-[0.05]">
+        <div className="absolute top-[680px] -left-8 sm:-left-16 w-[240px] sm:w-[440px] text-[#C59B27] opacity-[0.05]">
           <DelhiMehrabArchDrawing className="w-full h-auto" />
         </div>
-        <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[500px] text-[#C59B27] opacity-[0.04]">
+        <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[300px] sm:w-[500px] text-[#C59B27] opacity-[0.04]">
           <RoyalPadmaMandalaDrawing className="w-full h-auto" />
         </div>
       </div>

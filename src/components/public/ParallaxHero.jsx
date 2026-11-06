@@ -12,7 +12,16 @@ export function ParallaxHero() {
   const [scrollY, setScrollY] = useState(0);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-  // 60fps Scroll Parallax
+  // Check if screen is mobile/touch to prevent parallax jumpiness
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const checkDesktop = () => setIsDesktop(window.innerWidth >= 1024);
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+    return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
+
+  // 60fps Scroll Parallax (active on desktop)
   useEffect(() => {
     let ticking = false;
     const handleScroll = () => {
@@ -31,6 +40,7 @@ export function ParallaxHero() {
 
   // Subtle 3D Mouse Tilt
   const handleMouseMove = (e) => {
+    if (!isDesktop) return;
     const rect = heroRef.current?.getBoundingClientRect();
     if (!rect) return;
     const x = (e.clientX - rect.left) / rect.width - 0.5;
@@ -47,7 +57,7 @@ export function ParallaxHero() {
       ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative min-h-[92dvh] bg-[#FAF7F2] text-[#241814] flex items-center overflow-hidden pt-28 pb-16 lg:py-24 select-none"
+      className="relative min-h-[85dvh] lg:min-h-[90dvh] bg-[#FAF8F5] text-[#1C1917] flex items-center overflow-hidden pt-20 sm:pt-28 pb-12 sm:pb-16 lg:py-24"
     >
       {/* Ambient Radial Discs for Subtle Warmth */}
       <div
@@ -59,13 +69,13 @@ export function ParallaxHero() {
       />
 
       {/* Subtle Architectural Heritage Line-Art Watermark */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none max-w-full" aria-hidden="true">
         {/* Imperial Scalloped Arch framing the background */}
-        <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[720px] sm:w-[920px] lg:w-[1100px] text-[#C59B27] opacity-[0.06] sm:opacity-[0.08]">
+        <div className="absolute -top-6 sm:-top-10 left-1/2 -translate-x-1/2 w-[320px] sm:w-[600px] lg:w-[980px] text-[#C59B27] opacity-[0.06] sm:opacity-[0.08]">
           <DelhiMehrabArchDrawing className="w-full h-auto" />
         </div>
         {/* Subtle Lotus Medallion behind platter zone */}
-        <div className="absolute top-1/3 -right-20 w-[420px] text-[#C59B27] opacity-[0.05] sm:opacity-[0.07]">
+        <div className="absolute top-1/3 -right-10 sm:-right-20 w-[240px] sm:w-[420px] text-[#C59B27] opacity-[0.05] sm:opacity-[0.07]">
           <RoyalPadmaMandalaDrawing className="w-full h-auto" />
         </div>
       </div>
@@ -89,13 +99,13 @@ export function ParallaxHero() {
 
             {/* Headline with Clean Typographic Harmony */}
             <div className="space-y-1">
-              <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#241814] leading-[1.06]">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-[#1C1917] leading-[1.08]">
                 {t.hero.line1}
               </h1>
-              <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#9F1239] leading-[1.06]">
+              <h2 className="font-serif text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-[#9F1239] leading-[1.08]">
                 {t.hero.line2}
               </h2>
-              <p className="font-serif text-2xl sm:text-4xl lg:text-5xl font-medium text-[#B38234] italic pt-1 leading-snug">
+              <p className="font-serif text-xl sm:text-3xl lg:text-5xl font-medium text-[#C59B27] italic pt-1 leading-snug">
                 {t.hero.line3}
               </p>
             </div>
@@ -144,13 +154,15 @@ export function ParallaxHero() {
           </div>
 
           {/* Right Column: Vegetarian Royal Feast Platter with Subtle 3D Tilt */}
-          <div className="lg:col-span-6 relative flex items-center justify-center pt-4 lg:pt-0">
+          <div className="lg:col-span-6 relative flex items-center justify-center pt-2 sm:pt-4 lg:pt-0">
             
             {/* Interactive 3D Platter Wrapper */}
             <div
-              className="relative w-full max-w-[340px] sm:max-w-[450px] lg:max-w-[500px] aspect-square transition-transform duration-200 ease-out flex items-center justify-center"
+              className="relative w-full max-w-[280px] sm:max-w-[400px] lg:max-w-[480px] aspect-square transition-transform duration-200 ease-out flex items-center justify-center"
               style={{
-                transform: `perspective(1000px) rotateX(${mousePos.y * -10}deg) rotateY(${mousePos.x * 10}deg) translate3d(0, ${scrollY * -0.12}px, 0)`,
+                transform: isDesktop
+                  ? `perspective(1000px) rotateX(${mousePos.y * -10}deg) rotateY(${mousePos.x * 10}deg) translate3d(0, ${scrollY * -0.12}px, 0)`
+                  : 'none',
               }}
             >
               {/* Soft Ambient Shadow */}

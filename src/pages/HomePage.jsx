@@ -18,7 +18,7 @@ export function HomePage() {
   const [activeReviewIdx, setActiveReviewIdx] = useState(0);
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2]">
+    <div className="min-h-screen bg-[#FAF7F2] overflow-x-hidden max-w-full w-full">
       {/* 1. HERO SECTION */}
       <ParallaxHero />
 

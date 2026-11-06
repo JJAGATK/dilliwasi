@@ -51,30 +51,30 @@ export function BrandLogo({
   // Variant B: Horizontal Lockup (Crest + Wordmark)
   if (variant === 'horizontal') {
     return (
-      <div className={`inline-flex items-center space-x-3 select-none ${className}`} {...props}>
+      <div className={`inline-flex items-center space-x-2.5 sm:space-x-3 select-none min-w-0 ${className}`} {...props}>
         <div className="shrink-0 transition-transform duration-300 group-hover:scale-102">
-          <CrestImage sizeClass="w-9 h-9 sm:w-10 sm:h-10" />
+          <CrestImage sizeClass="w-8 h-8 sm:w-10 sm:h-10" />
         </div>
-        <div className="flex flex-col text-left">
-          <div className="flex items-center space-x-2">
+        <div className="flex flex-col text-left min-w-0">
+          <div className="flex items-center space-x-1.5 sm:space-x-2">
             <span
-              className="font-serif text-2xl sm:text-[25px] font-bold tracking-tight leading-none"
+              className="font-serif text-xl sm:text-2xl font-bold tracking-tight leading-none truncate"
               style={{ color: inkPrimary }}
             >
               DILLIWASI
             </span>
             <span
-              className="inline-flex items-center justify-center w-3 h-3 rounded-[2px] border border-[#15803D] bg-white p-[1px]"
+              className="inline-flex items-center justify-center w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-[2px] border border-[#15803D] bg-white p-[1px] shrink-0"
               title="100% Pure Vegetarian"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#15803D]" />
             </span>
           </div>
           <span
-            className="text-[9px] uppercase tracking-[0.22em] font-medium transition-colors duration-300 mt-1"
+            className="text-[8px] sm:text-[9px] uppercase tracking-[0.14em] sm:tracking-[0.22em] font-medium transition-colors duration-300 mt-0.5 sm:mt-1 truncate max-w-[170px] sm:max-w-none"
             style={{ color: goldPrimary }}
           >
-            Fine Dine &bull; Pure Desi Ghee &bull; Est. 2001
+            Fine Dine &bull; Pure Desi Ghee
           </span>
         </div>
       </div>
