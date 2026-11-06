@@ -264,22 +264,12 @@ export function CustomSelect({
                         )}
                       </div>
 
-                      {/* Right Indicator: Gold Checkmark for Selected OR Sparkle ✦ on Hover */}
+                      {/* Right Indicator: Checkmark for Selected */}
                       <div className="shrink-0 flex items-center space-x-1">
-                        {isSelected ? (
-                          <span
-                            className={`font-bold text-xs ${isDark && isSelected ? 'text-[#2A050C]' : 'text-[#D4A346]'}`}
-                            title="Selected"
-                          >
-                            ✓
-                          </span>
-                        ) : (
-                          <span
-                            className="text-[11px] text-[#D4A346] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
-                            aria-hidden="true"
-                          >
-                            ✦
-                          </span>
+                        {isSelected && (
+                          <svg className={`w-3.5 h-3.5 ${isDark && isSelected ? 'text-[#180308]' : 'text-[#C59B27]'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                          </svg>
                         )}
                       </div>
                     </div>

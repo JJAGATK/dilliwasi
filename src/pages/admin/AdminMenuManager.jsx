@@ -79,8 +79,7 @@ export function AdminMenuManager() {
 
   const filteredDishes = dishes.filter((d) => {
     if (activeCategory !== 'all' && d.category !== activeCategory) return false;
-    if (dietaryFilter === 'veg' && !d.isVeg) return false;
-    if (dietaryFilter === 'nonveg' && d.isVeg) return false;
+    if (dietaryFilter === 'ghee' && !d.isPureGhee) return false;
     if (dietaryFilter === 'signature' && !d.isSignature) return false;
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
@@ -163,9 +162,11 @@ export function AdminMenuManager() {
           {searchQuery && (
             <button
               onClick={() => setSearchQuery('')}
-              className="absolute right-2.5 top-2 text-stone-400 hover:text-stone-700 cursor-pointer text-xs"
+              className="absolute right-2.5 top-2.5 text-stone-400 hover:text-stone-700 cursor-pointer"
             >
-              ✕
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
           )}
         </div>
@@ -175,9 +176,8 @@ export function AdminMenuManager() {
           <span className="text-[11px] text-stone-500 font-medium mr-1">Classification:</span>
           {[
             { id: 'all', label: 'All Items' },
-            { id: 'veg', label: '● Pure Veg' },
-            { id: 'nonveg', label: '▲ Non-Veg' },
-            { id: 'signature', label: '✦ Signature' },
+            { id: 'ghee', label: 'Pure Desi Ghee' },
+            { id: 'signature', label: 'Signature' },
           ].map((d) => (
             <button
               key={d.id}

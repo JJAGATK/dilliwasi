@@ -101,7 +101,7 @@ export function Routes({ children }) {
   React.Children.forEach(children, (child) => {
     if (!React.isValidElement(child)) return;
     const { path, element } = child.props;
-    
+
     // Exact or prefix match
     if (path === '*' && !matchedElement) {
       matchedElement = element;

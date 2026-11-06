@@ -615,9 +615,7 @@ export function AdminOverview() {
                       style={{ height: `${heightPercent}%` }}
                     >
                       {d.peak && (
-                        <span className="absolute -top-2 left-1/2 -translate-x-1/2 text-[9px] text-[#A37424] font-bold">
-                          ✦
-                        </span>
+                        <span className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#A37424]" />
                       )}
                     </div>
 
@@ -987,9 +985,11 @@ export function AdminOverview() {
             {resSearchQuery && (
               <button
                 onClick={() => setResSearchQuery('')}
-                className="absolute right-2.5 top-2 text-stone-400 hover:text-stone-700 text-xs cursor-pointer"
+                className="absolute right-2.5 top-2.5 text-stone-400 hover:text-stone-700 cursor-pointer"
               >
-                ✕
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
             )}
           </div>

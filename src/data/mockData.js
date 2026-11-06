@@ -25,24 +25,24 @@ export const restaurantInfo = {
 };
 
 export const menuCategories = [
-  { id: "all", label: "Full Collection", icon: "🍽️" },
-  { id: "combos", label: "Combos & Royal Thali", icon: "👑" },
-  { id: "tandoor", label: "Tandoori Starters", icon: "🍢" },
-  { id: "curries", label: "Paneer & Sabzi", icon: "🍲" },
-  { id: "dals", label: "Dals & Desi Ghee", icon: "🧈" },
-  { id: "breads", label: "Breads & Naans", icon: "🫓" },
-  { id: "rice", label: "Rice & Biryani", icon: "🍚" },
-  { id: "chinese", label: "Chinese & Noodles", icon: "🥢" },
-  { id: "momos", label: "Momos", icon: "🥟" },
-  { id: "sizzlers", label: "Sizzlers & Burgers", icon: "🔥" },
-  { id: "pizzas", label: "Pizzas (9\")", icon: "🍕" },
-  { id: "pastas", label: "Pastas", icon: "🍝" },
-  { id: "western", label: "Fries & Finger Food", icon: "🍟" },
-  { id: "soups", label: "Soups & Shorba", icon: "🥣" },
-  { id: "salads", label: "Salads & Chaat", icon: "🥗" },
-  { id: "beverages", label: "Mocktails & Coolers", icon: "🍹" },
-  { id: "shakes", label: "Shakes & Cold Coffee", icon: "🥤" },
-  { id: "desserts", label: "Raitas & Desserts", icon: "🍨" },
+  { id: "all", label: "All Items" },
+  { id: "combos", label: "Combos & Royal Thali" },
+  { id: "tandoor", label: "Tandoori Starters" },
+  { id: "curries", label: "Paneer & Sabzi" },
+  { id: "dals", label: "Dals & Desi Ghee" },
+  { id: "breads", label: "Breads & Naans" },
+  { id: "rice", label: "Rice & Biryani" },
+  { id: "chinese", label: "Chinese & Noodles" },
+  { id: "momos", label: "Momos" },
+  { id: "sizzlers", label: "Sizzlers & Burgers" },
+  { id: "pizzas", label: "Pizzas (9\")" },
+  { id: "pastas", label: "Pastas" },
+  { id: "western", label: "Fries & Finger Food" },
+  { id: "soups", label: "Soups & Shorba" },
+  { id: "salads", label: "Salads & Chaat" },
+  { id: "beverages", label: "Mocktails & Coolers" },
+  { id: "shakes", label: "Shakes & Cold Coffee" },
+  { id: "desserts", label: "Raitas & Desserts" },
 ];
 
 export const menuDishes = [
@@ -1724,40 +1724,40 @@ export const galleryItems = [
 
 export const ourSixCharms = [
   {
+    number: "01",
     charm: "Welcome & Gratitude",
     hindi: "आतिथ्य एवं कृतज्ञता",
     desc: "Heartfelt Indian hospitality greeting every family with warmth and respect.",
-    icon: "🙏"
   },
   {
+    number: "02",
     charm: "Purity & Calmness",
     hindi: "शुद्धता एवं शांति",
     desc: "100% pure vegetarian kitchen cooking exclusively in pure desi ghee.",
-    icon: "🌱"
   },
   {
+    number: "03",
     charm: "Good Luck & Fortune",
     hindi: "सौभाग्य एवं समृद्धि",
     desc: "Wholesome culinary blessings rooted in authentic North Indian food culture.",
-    icon: "✨"
   },
   {
+    number: "04",
     charm: "Innocence & Sincerity",
     hindi: "सरलता एवं सत्यनिष्ठा",
     desc: "Honest recipes with no artificial food colors, no MSG shortcuts, and pure farm ingredients.",
-    icon: "🌿"
   },
   {
+    number: "05",
     charm: "Love & Devotion",
     hindi: "प्रेम एवं साधना",
     desc: "Every dish crafted with culinary passion, patience, and time-honored techniques.",
-    icon: "❤️"
   },
   {
+    number: "06",
     charm: "Positive & Joyful",
     hindi: "उमंग एवं आनंद",
     desc: "A vibrant rooftop and fine dine atmosphere creating joyful memories with every meal.",
-    icon: "🌟"
   }
 ];
 

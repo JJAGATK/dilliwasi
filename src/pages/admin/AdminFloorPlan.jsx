@@ -147,7 +147,6 @@ export function AdminFloorPlan() {
         borderClass: 'border-2 border-dashed border-stone-300 hover:border-stone-400',
         badge: (
           <span className="inline-flex items-center space-x-1 px-1.5 py-0.5 rounded-full text-[9px] font-bold bg-white/20 text-white border border-white/30 uppercase tracking-wider">
-            <span>✦</span>
             <span>Reset</span>
           </span>
         ),
@@ -304,9 +303,11 @@ export function AdminFloorPlan() {
           {searchQuery && (
             <button
               onClick={() => setSearchQuery('')}
-              className="absolute right-2.5 top-2 text-stone-400 hover:text-stone-700 cursor-pointer text-xs"
+              className="absolute right-2.5 top-2.5 text-stone-400 hover:text-stone-700 cursor-pointer"
             >
-              ✕
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
           )}
         </div>
@@ -491,14 +492,12 @@ export function AdminFloorPlan() {
                     onClick={() => updateTableStatus(selectedTable.id, 'reserved')}
                     className="px-3 py-2 text-xs rounded-lg bg-[#D97706] text-white hover:bg-[#b45309] font-semibold transition-all shadow-2xs cursor-pointer flex items-center justify-center space-x-1"
                   >
-                    <span>⏱</span>
                     <span>Hold / Reserve</span>
                   </button>
                   <button
                     onClick={() => updateTableStatus(selectedTable.id, 'cleaning')}
                     className="px-3 py-2 text-xs rounded-lg bg-[#64748B] text-white hover:bg-[#475569] font-semibold transition-all shadow-2xs cursor-pointer flex items-center justify-center space-x-1"
                   >
-                    <span>✦</span>
                     <span>Sanitize</span>
                   </button>
                 </div>

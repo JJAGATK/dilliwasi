@@ -39,26 +39,26 @@ export function AdminOrders() {
     },
     {
       id: 'preparing',
-      label: '2. In Tandoor / Deg',
-      icon: '🔥',
+      label: '2. In Preparation',
+      icon: '02',
       sla: 'SLA 12–15m',
-      badgeColor: 'bg-[#D97706]/10 text-[#D97706] border border-[#D97706]/30',
+      badgeColor: 'bg-[#D81B60]/10 text-[#D81B60] border border-[#D81B60]/30',
       actionLabel: 'Mark Plated →',
-      actionClass: 'bg-[#D97706] hover:bg-[#B45309] text-white',
+      actionClass: 'bg-[#D81B60] hover:bg-[#C2185B] text-white',
     },
     {
       id: 'ready',
       label: '3. Plated & Ready',
-      icon: '🔔',
+      icon: '03',
       sla: 'SLA < 3m',
-      badgeColor: 'bg-[#047857]/10 text-[#047857] border border-[#047857]/30',
-      actionLabel: 'Mark Served ✓',
-      actionClass: 'bg-[#047857] hover:bg-[#065F46] text-white',
+      badgeColor: 'bg-[#C59B27]/10 text-[#C59B27] border border-[#C59B27]/30',
+      actionLabel: 'Mark Served →',
+      actionClass: 'bg-[#C59B27] hover:bg-[#A67C1E] text-white',
     },
     {
       id: 'delivered',
       label: '4. Delivered to Table',
-      icon: '✓',
+      icon: '04',
       sla: 'Complete',
       badgeColor: 'bg-stone-100 text-stone-600 border border-stone-200',
       actionLabel: null,
@@ -113,9 +113,11 @@ export function AdminOrders() {
           {searchQuery && (
             <button
               onClick={() => setSearchQuery('')}
-              className="absolute right-2.5 top-2 text-stone-400 hover:text-stone-700 cursor-pointer text-xs"
+              className="absolute right-2.5 top-2.5 text-stone-400 hover:text-stone-700 cursor-pointer"
             >
-              ✕
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
           )}
         </div>
@@ -287,8 +289,8 @@ export function AdminOrders() {
                         )}
 
                         {ord.status === 'delivered' && (
-                          <span className="text-[11px] font-semibold text-[#047857] bg-[#ECFDF5] border border-[#A7F3D0] px-2.5 py-1 rounded-lg">
-                            ✓ Served to Table
+                          <span className="text-[11px] font-semibold text-[#15803D] bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-lg">
+                            Served to Table
                           </span>
                         )}
                       </div>

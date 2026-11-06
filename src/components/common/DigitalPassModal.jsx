@@ -57,11 +57,13 @@ export function DigitalPassModal({ reservation, onClose }) {
             </span>
             <button
               onClick={onClose}
-              className="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white flex items-center justify-center text-sm transition-colors cursor-pointer"
+              className="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white flex items-center justify-center transition-colors cursor-pointer"
               title="Close Pass"
               aria-label="Close"
             >
-              ✕
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
           </div>
         </div>
@@ -164,7 +166,7 @@ export function DigitalPassModal({ reservation, onClose }) {
             onClick={handleCopySMS}
             className="flex-1 px-3 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-white text-xs font-semibold transition-all cursor-pointer text-center border border-white/10"
           >
-            {copied ? 'Copied! ✓' : 'Copy SMS'}
+            {copied ? 'Copied' : 'Copy SMS'}
           </button>
 
           <button

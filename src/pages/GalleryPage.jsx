@@ -2,16 +2,17 @@ import React, { useState } from 'react';
 import { Link } from '../router/Router';
 import { galleryItems } from '../data/mockData';
 import { Button } from '../components/common/Button';
+import { DietaryMarker } from '../components/common/Badge';
 
 export function GalleryPage() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [activeFilter, setActiveFilter] = useState('all');
 
   const categories = [
-    { id: 'all', label: `All Moments (${galleryItems.length})` },
+    { id: 'all', label: `All (${galleryItems.length})` },
     { id: 'Feast', label: `Pure Veg Feasts (${galleryItems.filter((i) => i.category === 'Feast').length})` },
     { id: 'Tandoor', label: `Clay Tandoor (${galleryItems.filter((i) => i.category === 'Tandoor').length})` },
-    { id: 'Ambiance', label: `Rooftop & Fine Dine (${galleryItems.filter((i) => i.category === 'Ambiance').length})` },
+    { id: 'Ambiance', label: `Rooftop & Dining (${galleryItems.filter((i) => i.category === 'Ambiance').length})` },
     { id: 'Craft', label: `Heritage Craft (${galleryItems.filter((i) => i.category === 'Craft').length})` },
   ];
 
@@ -21,39 +22,39 @@ export function GalleryPage() {
   });
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] text-[#241814] pt-24 sm:pt-28 pb-24">
+    <div className="min-h-screen bg-[#FAF8F5] text-[#1C1917] pt-24 sm:pt-28 pb-24">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Breadcrumb Navigation */}
-        <nav className="flex items-center space-x-2 text-xs text-[#6E5D53] mb-4 sm:mb-6">
-          <Link to="/" className="hover:text-[#241814] transition-colors">Home</Link>
+        <nav className="flex items-center space-x-2 text-xs text-[#78716C] mb-4 sm:mb-6">
+          <Link to="/" className="hover:text-[#1C1917] transition-colors">Home</Link>
           <span>/</span>
-          <span className="text-[#E60067] font-semibold">Gallery</span>
+          <span className="text-[#D81B60] font-medium">Gallery</span>
         </nav>
         
         {/* Gallery Header */}
         <div className="max-w-2xl">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold mb-2">
-            <span className="w-2 h-2 rounded-full bg-[#16A34A]" />
-            <span>100% PURE VEG &bull; HARIDWAR SINCE 2001</span>
-          </div>
-          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#241814]">
-            Dilliwasi Visual Archive
+          <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#D81B60] block mb-1">
+            Visual Archive
+          </span>
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#1C1917]">
+            Dilliwasi Gallery
           </h1>
-          <p className="text-sm sm:text-base text-[#6E5D53] mt-2 leading-relaxed">
+          <p className="text-sm text-[#57534E] mt-2 leading-relaxed font-light">
             Atmospheric chronicles of our 100% pure vegetarian culinary craftsmanship, pure desi ghee slow-simmered gravies, clay tandoor starters, and starlit rooftop cafe in Haridwar.
           </p>
         </div>
 
         {/* Gallery Filter Tabs */}
-        <div className="mt-8 flex items-center space-x-2 overflow-x-auto pb-2 scrollbar-none border-b border-[#D4A346]/20">
+        <div className="mt-8 flex items-center space-x-2 overflow-x-auto pb-2 scrollbar-none border-b border-stone-200">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveFilter(cat.id)}
-              className={`px-4 py-2 text-xs uppercase tracking-wider font-semibold rounded-full transition-all duration-200 whitespace-nowrap cursor-pointer shrink-0 ${
+              className={`px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-150 whitespace-nowrap cursor-pointer shrink-0 ${
                 activeFilter === cat.id
-                  ? 'bg-[#2A050C] text-[#FAF7F2] shadow-sm ring-2 ring-[#E60067]/40'
-                  : 'bg-white text-[#6E5D53] hover:text-[#241814] hover:bg-[#EDE5D8] border border-[#D4A346]/20'
+                  ? 'bg-[#1C1917] text-white shadow-2xs'
+                  : 'bg-white text-[#57534E] hover:text-[#1C1917] border border-stone-200'
               }`}
             >
               {cat.label}
@@ -62,56 +63,59 @@ export function GalleryPage() {
         </div>
 
         {/* Gallery Grid */}
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item) => (
             <article
               key={item.id}
               onClick={() => setSelectedItem(item)}
-              className="group cursor-pointer rounded-2xl bg-white border border-[#D4A346]/25 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="group cursor-pointer rounded-2xl bg-white border border-stone-200/90 overflow-hidden shadow-2xs hover:border-[#D81B60]/35 transition-all duration-200 flex flex-col justify-between"
             >
               {/* Aspect Container */}
-              <div className="relative aspect-[4/3] bg-[#1E0408] overflow-hidden">
+              <div className="relative aspect-[4/3] bg-stone-900 overflow-hidden">
                 {item.image ? (
                   <img
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-104"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
                   />
                 ) : null}
 
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1F0409]/90 via-transparent to-black/20 pointer-events-none" />
+                {/* Subtle gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
 
                 {/* Top Badge */}
                 <div className="absolute top-3 left-3 z-10">
-                  <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white bg-[#2A050C]/90 backdrop-blur-sm rounded-full border border-[#D4A346]/40 shadow-sm">
+                  <span className="px-2.5 py-0.5 text-[9px] font-semibold uppercase tracking-widest text-white bg-black/60 backdrop-blur-xs rounded-full border border-white/20">
                     {item.badge}
                   </span>
                 </div>
 
                 {/* Bottom title */}
                 <div className="absolute bottom-3 left-3 right-3 z-10 flex items-center justify-between text-xs text-white">
-                  <h3 className="font-serif font-bold text-base text-white drop-shadow-sm line-clamp-1">
+                  <h3 className="font-serif font-bold text-sm text-white line-clamp-1">
                     {item.title}
                   </h3>
-                  <span className="text-[10px] uppercase tracking-wider text-[#E8C066] bg-black/60 backdrop-blur-xs px-2.5 py-1 rounded-full font-bold border border-[#D4A346]/30 shrink-0 ml-2">
-                    View ↗
+                  <span className="text-[10px] uppercase tracking-wider text-stone-300 font-medium shrink-0 ml-2">
+                    Inspect &rarr;
                   </span>
                 </div>
               </div>
 
               {/* Caption */}
-              <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-2">
-                <p className="text-xs text-[#6E5D53] leading-relaxed">
+              <div className="p-4 flex-1 flex flex-col justify-between space-y-2">
+                <p className="text-xs text-[#57534E] leading-relaxed font-light">
                   {item.description}
                 </p>
-                <div className="pt-2 flex items-center justify-between text-[11px] text-[#9B897D] border-t border-stone-100">
-                  <span className="font-semibold text-[#16A34A]">✓ 100% Pure Veg</span>
-                  <span className="uppercase tracking-wider">{item.category}</span>
+                <div className="pt-2 flex items-center justify-between text-[10px] text-[#A8A29E] border-t border-stone-100">
+                  <div className="flex items-center space-x-1.5">
+                    <DietaryMarker isVeg={true} />
+                    <span className="font-medium text-[#15803D]">Pure Veg</span>
+                  </div>
+                  <span className="uppercase tracking-widest">{item.category}</span>
                 </div>
               </div>
             </article>
@@ -121,11 +125,11 @@ export function GalleryPage() {
         {/* Modal for detailed inspection */}
         {selectedItem && (
           <div
-            className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4"
             onClick={() => setSelectedItem(null)}
           >
             <div
-              className="bg-[#FAF7F2] rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-[#D4A346]/40"
+              className="bg-[#FAF8F5] rounded-3xl max-w-xl w-full overflow-hidden shadow-xl border border-stone-200"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative aspect-[16/10] bg-black">
@@ -136,24 +140,27 @@ export function GalleryPage() {
                 />
                 <button
                   onClick={() => setSelectedItem(null)}
-                  className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/70 text-white flex items-center justify-center hover:bg-[#E60067] transition-colors"
+                  className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-[#D81B60] transition-colors"
+                  aria-label="Close Preview"
                 >
-                  ✕
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                 </button>
               </div>
 
-              <div className="p-6 sm:p-8 space-y-3">
+              <div className="p-6 space-y-3">
                 <div className="flex items-center space-x-2">
-                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-100 text-[#E60067] border border-rose-200">
+                  <span className="px-2 py-0.5 rounded text-[9px] font-semibold uppercase tracking-wider bg-[#FFF0F5] text-[#D81B60] border border-[#D81B60]/30">
                     {selectedItem.badge}
                   </span>
-                  <span className="text-xs text-[#9B897D]">&bull;</span>
-                  <span className="text-xs text-[#6E5D53] uppercase font-semibold">{selectedItem.category}</span>
+                  <span className="text-xs text-stone-300">&bull;</span>
+                  <span className="text-[10px] text-[#78716C] uppercase tracking-wider font-medium">{selectedItem.category}</span>
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-[#241814]">
+                <h3 className="font-serif text-xl font-bold text-[#1C1917]">
                   {selectedItem.title}
                 </h3>
-                <p className="text-sm text-[#6E5D53] leading-relaxed">
+                <p className="text-xs text-[#57534E] leading-relaxed font-light">
                   {selectedItem.description}
                 </p>
 
@@ -165,9 +172,9 @@ export function GalleryPage() {
                   </Link>
                   <a
                     href="tel:+919058882691"
-                    className="text-xs font-bold text-[#E60067] hover:underline"
+                    className="text-xs font-medium text-[#D81B60] hover:underline"
                   >
-                    Inquiries: +91 90588 82691
+                    +91 90588 82691
                   </a>
                 </div>
               </div>

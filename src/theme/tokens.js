@@ -1,106 +1,57 @@
 /**
  * Dilliwasi Semantic Design Tokens
- * Harmonized with the royal DW emblem (#E60067 magenta, #2A050C royal burgundy, #D4A346 antique brass gold, #16A34A pure veg green)
- * Single Source of Truth for all components.
+ * Minimalist luxury palette derived directly from the DW Emblem:
+ * - Brand Ruby/Magenta (#D81B60 / #E60067)
+ * - Warm Antique Gold (#C59B27 / #D4A346)
+ * - Deep Charcoal & Ink (#1C1917 / #292524)
+ * - Muted Stone (#78716C / #A8A29E)
+ * - Pure Light Canvas (#FCFBF9 / #FAF8F5 / #FFFFFF)
+ * - Night Ruby (#180308 / #1F040A)
+ * - Pure Vegetarian Green (#15803D)
  */
 
 export const tokens = {
   colors: {
-    // Brand Specific
-    brandMagenta: '#E60067',
-    brandCrimson: '#2A050C',
-    brandGold: '#D4A346',
+    // Brand Core (DW Monogram & Ring)
+    brandMagenta: '#D81B60',
+    brandMagentaLight: '#FCE4EC',
+    brandGold: '#C59B27',
+    brandGoldLight: '#FDF8EC',
 
-    // Light Canvas System (Public Default & Admin Light)
-    canvas: '#FAF7F2',        // Warm antique parchment surface
-    surface: '#F4EFE6',       // Sandstone container fill
-    surfaceElevated: '#EDE5D8',// Floating panels, dropdowns, modals
-    surfaceHover: '#E8DFC8',
+    // Canvas Surfaces (Minimalist warm neutrals)
+    canvas: '#FAF8F5',
+    canvasPure: '#FFFFFF',
+    surface: '#F5F2EB',
+    surfaceSubtle: '#ECE7DD',
 
-    // Dark Canvas System (Hero, Accent Sections & Admin Dark)
-    canvasDark: '#2A050C',    // Royal Burgundy base
-    surfaceDark: '#1F0409',   // Deep wine container
-    surfaceElevatedDark: '#380812', // Modals and elevated dark panels
-    surfaceHoverDark: '#4A0C1A',
+    // Dark Surface
+    canvasDark: '#180308',
+    surfaceDark: '#1F040A',
+    surfaceElevatedDark: '#2C0610',
 
-    // Typography & Ink
-    inkPrimary: '#241814',    // Deep roasted umber
-    inkSecondary: '#6E5D53',  // Warm stone taupe
-    inkMuted: '#9B897D',      // Subdued metadata
-    
-    // Dark Mode Inks
-    textPrimaryDark: '#FAF7F2',
-    textSecondaryDark: '#C7B8AA',
-    textMutedDark: '#8C7A6D',
+    // Typography
+    inkPrimary: '#1C1917',
+    inkSecondary: '#57534E',
+    inkMuted: '#8C827A',
 
-    // Primary Metallic Accent (Antique Brass / Gold)
-    accent: '#D4A346',
-    accentLight: '#E8C066',
-    accentDark: '#B38234',
-    accentGlow: 'rgba(212, 163, 70, 0.18)',
-    magentaGlow: 'rgba(230, 0, 103, 0.18)',
+    // Dark Mode Text
+    textPrimaryDark: '#FAF8F5',
+    textSecondaryDark: '#D6CECB',
+    textMutedDark: '#9C908D',
 
-    // Borders
-    borderSubtle: 'rgba(212, 163, 70, 0.22)',
-    borderStrong: 'rgba(110, 93, 83, 0.35)',
-    borderDark: 'rgba(232, 192, 102, 0.20)',
+    // Hairline Borders
+    borderSubtle: 'rgba(197, 155, 39, 0.20)',
+    borderNeutral: 'rgba(28, 25, 23, 0.08)',
+    borderDark: 'rgba(197, 155, 39, 0.22)',
 
-    // Dietary & Status Indicators (100% Pure Veg)
-    veg: '#16A34A',           // Vibrant Pure Vegetarian Green
-    pureGhee: '#D97706',      // Golden Desi Ghee
-    spice: '#EA580C',         // Saffron Chilli
-    success: '#16A34A',
-    warning: '#D4A346',
-    danger: '#E60067',
-    info: '#5D4037',
+    // Pure Vegetarian Marker
+    veg: '#15803D',
   },
 
   typography: {
     fontSerif: '"Bodoni Moda", Georgia, serif',
     fontSans: '"Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif',
-    headingTracking: '-0.02em',
-    labelTracking: '0.14em',
-    bodyLineHeight: '1.6',
-  },
-
-  spacing: {
-    0: '0px',
-    1: '4px',
-    2: '8px',
-    3: '12px',
-    4: '16px',
-    5: '20px',
-    6: '24px',
-    8: '32px',
-    10: '40px',
-    12: '48px',
-    16: '64px',
-    20: '80px',
-    24: '96px',
-    32: '128px',
-  },
-
-  radii: {
-    none: '0px',
-    sm: '4px',
-    md: '8px',
-    lg: '12px',
-    xl: '18px',
-    full: '9999px',
-  },
-
-  shadows: {
-    subtle: '0 4px 16px -2px rgba(42, 5, 12, 0.05)',
-    card: '0 12px 32px -8px rgba(42, 5, 12, 0.08), 0 2px 6px -1px rgba(42, 5, 12, 0.04)',
-    elevated: '0 24px 48px -12px rgba(42, 5, 12, 0.16)',
-    goldGlow: '0 0 25px rgba(212, 163, 70, 0.25)',
-  },
-
-  motion: {
-    fast: '120ms cubic-bezier(0.16, 1, 0.3, 1)',
-    normal: '240ms cubic-bezier(0.16, 1, 0.3, 1)',
-    slow: '380ms cubic-bezier(0.16, 1, 0.3, 1)',
-    curve: 'cubic-bezier(0.16, 1, 0.3, 1)',
+    headingTracking: '-0.025em',
+    labelTracking: '0.18em',
   }
 };
-
