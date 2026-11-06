@@ -4,6 +4,11 @@ import { DietaryMarker, PureDesiGheeBadge, ChefSpecialBadge } from '../component
 import { ParallaxHero } from '../components/public/ParallaxHero';
 import { menuDishes, initialReviews, ourSixCharms } from '../data/mockData';
 import { useLanguage } from '../context/LanguageContext';
+import {
+  DesiGheeHandiDrawing,
+  BotanicalSpicesDrawing,
+  RooftopPavilionDrawing,
+} from '../components/common/DilliwasiHeritageDrawings';
 
 export function HomePage() {
   const { t } = useLanguage();
@@ -164,35 +169,44 @@ export function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-[rgba(212,163,70,0.25)] space-y-3">
-              <span className="text-2xl font-serif font-bold text-[#9F1239] block">01</span>
-              <h3 className="font-serif text-xl font-bold text-[#241814]">Pure Desi Ghee Slow Simmer</h3>
-              <p className="text-xs sm:text-sm text-[#6E5D53] leading-relaxed font-light">
+            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-[rgba(212,163,70,0.25)] space-y-3 relative overflow-hidden">
+              <div className="absolute -bottom-4 -right-4 w-32 text-[#C59B27] opacity-10 pointer-events-none">
+                <DesiGheeHandiDrawing className="w-full h-auto" />
+              </div>
+              <span className="text-2xl font-serif font-bold text-[#9F1239] block relative z-10">01</span>
+              <h3 className="font-serif text-xl font-bold text-[#241814] relative z-10">Pure Desi Ghee Slow Simmer</h3>
+              <p className="text-xs sm:text-sm text-[#6E5D53] leading-relaxed font-light relative z-10">
                 Our signature Black Dairy Dal Makhani, Paneer Labaabdaar, and Royal Curries are prepared with rich pure desi ghee for true authentic depth.
               </p>
-              <div className="text-[10px] font-semibold text-[#B38234] tracking-widest uppercase pt-2 border-t border-stone-100">
+              <div className="text-[10px] font-semibold text-[#B38234] tracking-widest uppercase pt-2 border-t border-stone-100 relative z-10">
                 Pure Desi Ghee &bull; 16-Hour Simmer
               </div>
             </div>
 
-            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-[rgba(212,163,70,0.25)] space-y-3">
-              <span className="text-2xl font-serif font-bold text-[#9F1239] block">02</span>
-              <h3 className="font-serif text-xl font-bold text-[#241814]">Traditional Clay Tandoor</h3>
-              <p className="text-xs sm:text-sm text-[#6E5D53] leading-relaxed font-light">
+            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-[rgba(212,163,70,0.25)] space-y-3 relative overflow-hidden">
+              <div className="absolute -bottom-4 -right-4 w-32 text-[#C59B27] opacity-10 pointer-events-none">
+                <BotanicalSpicesDrawing className="w-full h-auto" />
+              </div>
+              <span className="text-2xl font-serif font-bold text-[#9F1239] block relative z-10">02</span>
+              <h3 className="font-serif text-xl font-bold text-[#241814] relative z-10">Traditional Clay Tandoor</h3>
+              <p className="text-xs sm:text-sm text-[#6E5D53] leading-relaxed font-light relative z-10">
                 Clay ovens fired with natural charcoal embers impart delicate smokiness to Paneer Malai Tikka, Tandoori Momos, and crisp stuffed breads.
               </p>
-              <div className="text-[10px] font-semibold text-[#15803D] tracking-widest uppercase pt-2 border-t border-stone-100">
+              <div className="text-[10px] font-semibold text-[#15803D] tracking-widest uppercase pt-2 border-t border-stone-100 relative z-10">
                 100% Pure Veg Skewers & Breads
               </div>
             </div>
 
-            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-[rgba(212,163,70,0.25)] space-y-3">
-              <span className="text-2xl font-serif font-bold text-[#9F1239] block">03</span>
-              <h3 className="font-serif text-xl font-bold text-[#241814]">Rooftop Terrace & Fine Dine</h3>
-              <p className="text-xs sm:text-sm text-[#6E5D53] leading-relaxed font-light">
+            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-[rgba(212,163,70,0.25)] space-y-3 relative overflow-hidden">
+              <div className="absolute -bottom-4 -right-4 w-32 text-[#C59B27] opacity-10 pointer-events-none">
+                <RooftopPavilionDrawing className="w-full h-auto" />
+              </div>
+              <span className="text-2xl font-serif font-bold text-[#9F1239] block relative z-10">03</span>
+              <h3 className="font-serif text-xl font-bold text-[#241814] relative z-10">Rooftop Terrace & Fine Dine</h3>
+              <p className="text-xs sm:text-sm text-[#6E5D53] leading-relaxed font-light relative z-10">
                 3rd floor air-conditioned dining hall paired with a 4th floor open-air rooftop terrace overlooking the Shivalik foothills.
               </p>
-              <div className="text-[10px] font-semibold text-[#9F1239] tracking-widest uppercase pt-2 border-t border-stone-100">
+              <div className="text-[10px] font-semibold text-[#9F1239] tracking-widest uppercase pt-2 border-t border-stone-100 relative z-10">
                 Open-Air Terrace &bull; Family Suites
               </div>
             </div>
