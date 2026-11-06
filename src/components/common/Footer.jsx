@@ -2,10 +2,16 @@ import React from 'react';
 import { Link } from '../../router/Router';
 import { BrandLogo } from './BrandLogo';
 import { restaurantInfo } from '../../data/mockData';
+import { DelhiMehrabArchDrawing } from './DilliwasiHeritageDrawings';
 
 export function Footer() {
   return (
     <footer className="bg-[#180308] text-[#FAF8F5] border-t border-[#C59B27]/25 relative overflow-hidden">
+      {/* Subtle Nocturnal Scalloped Arch Watermark */}
+      <div className="absolute -top-12 -right-16 w-[420px] text-[#C59B27] opacity-[0.04] pointer-events-none select-none" aria-hidden="true">
+        <DelhiMehrabArchDrawing className="w-full h-auto" />
+      </div>
+
       {/* Decorative Golden Hairline */}
       <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#C59B27] to-transparent opacity-40" />
 

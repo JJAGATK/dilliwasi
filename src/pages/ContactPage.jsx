@@ -3,6 +3,10 @@ import { Link } from '../router/Router';
 import { restaurantInfo } from '../data/mockData';
 import { Button } from '../components/common/Button';
 import { CustomSelect } from '../components/common/CustomSelect';
+import {
+  RooftopPavilionDrawing,
+  DelhiMehrabArchDrawing,
+} from '../components/common/DilliwasiHeritageDrawings';
 
 export function ContactPage() {
   const [form, setForm] = useState({
@@ -27,8 +31,18 @@ export function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] text-[#241814] pt-24 sm:pt-28 pb-24">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#FAF7F2] text-[#241814] pt-24 sm:pt-28 pb-24 relative overflow-hidden">
+      {/* Background Architectural Drawings Watermarks */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+        <div className="absolute top-16 right-8 w-[400px] text-[#C59B27] opacity-[0.06]">
+          <RooftopPavilionDrawing className="w-full h-auto" />
+        </div>
+        <div className="absolute bottom-10 left-10 w-[420px] text-[#C59B27] opacity-[0.05]">
+          <DelhiMehrabArchDrawing className="w-full h-auto" />
+        </div>
+      </div>
+
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Breadcrumb Navigation */}
         <nav className="flex items-center space-x-2 text-xs text-[#6E5D53] mb-4 sm:mb-6">

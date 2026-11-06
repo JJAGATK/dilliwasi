@@ -300,3 +300,4 @@ export function BotanicalSpicesDrawing({ className = '', stroke = 'currentColor'
     </svg>
   );
 }
+

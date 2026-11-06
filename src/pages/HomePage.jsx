@@ -8,6 +8,8 @@ import {
   DesiGheeHandiDrawing,
   BotanicalSpicesDrawing,
   RooftopPavilionDrawing,
+  DelhiMehrabArchDrawing,
+  RoyalPadmaMandalaDrawing,
 } from '../components/common/DilliwasiHeritageDrawings';
 
 export function HomePage() {
@@ -21,8 +23,13 @@ export function HomePage() {
       <ParallaxHero />
 
       {/* 2. SIGNATURE REPERTOIRE */}
-      <section className="py-16 sm:py-24 bg-[#FAF7F2] text-[#241814] relative">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-24 bg-[#FAF7F2] text-[#241814] relative overflow-hidden">
+        {/* Subtle Ambient Lotus Medallion Watermark */}
+        <div className="absolute top-1/2 -right-24 -translate-y-1/2 w-[460px] text-[#C59B27] opacity-[0.05] pointer-events-none select-none" aria-hidden="true">
+          <RoyalPadmaMandalaDrawing className="w-full h-auto" />
+        </div>
+
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12">
             <div>
               <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#9F1239] block mb-1">
@@ -215,8 +222,13 @@ export function HomePage() {
       </section>
 
       {/* 5. GUEST TESTIMONIALS */}
-      <section className="py-16 sm:py-20 bg-[#FAF7F2] text-[#241814] border-t border-[rgba(212,163,70,0.2)]">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 bg-[#FAF7F2] text-[#241814] border-t border-[rgba(212,163,70,0.2)] relative overflow-hidden">
+        {/* Subtle Scalloped Arch Watermark behind testimonials */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] text-[#C59B27] opacity-[0.05] pointer-events-none select-none" aria-hidden="true">
+          <DelhiMehrabArchDrawing className="w-full h-auto" />
+        </div>
+
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-xl mx-auto mb-10">
             <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#9F1239] block mb-1">
               Patron Chronicles
@@ -250,9 +262,8 @@ export function HomePage() {
                 <button
                   key={idx}
                   onClick={() => setActiveReviewIdx(idx)}
-                  className={`h-1.5 rounded-full transition-all cursor-pointer ${
-                    activeReviewIdx === idx ? 'bg-[#9F1239] w-5' : 'bg-stone-200 w-1.5'
-                  }`}
+                  className={`h-1.5 rounded-full transition-all cursor-pointer ${activeReviewIdx === idx ? 'bg-[#9F1239] w-5' : 'bg-stone-200 w-1.5'
+                    }`}
                   aria-label={`View Review ${idx + 1}`}
                 />
               ))}
@@ -266,7 +277,7 @@ export function HomePage() {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl bg-[#2A050C] text-[#FAF7F2] p-6 sm:p-12 lg:p-16 border border-[#D4A346]/30 shadow-lg">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              
+
               <div className="lg:col-span-8 space-y-4">
                 <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#D4A346] block">
                   Fine Dine & Rooftop Cafe

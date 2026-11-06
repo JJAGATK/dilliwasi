@@ -4,6 +4,12 @@ import { menuCategories, menuDishes, restaurantInfo } from '../data/mockData';
 import { DietaryMarker, PureDesiGheeBadge, ChefSpecialBadge } from '../components/common/Badge';
 import { Button } from '../components/common/Button';
 import { BrandLogo } from '../components/common/BrandLogo';
+import {
+  DelhiMehrabArchDrawing,
+  DesiGheeHandiDrawing,
+  BotanicalSpicesDrawing,
+  RoyalPadmaMandalaDrawing,
+} from '../components/common/DilliwasiHeritageDrawings';
 
 export function MenuPage() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -52,9 +58,29 @@ export function MenuPage() {
   }, [activeCategory, filterType, searchQuery]);
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] text-[#241814] pt-24 sm:pt-28 pb-24">
+    <div className="min-h-screen bg-[#FAF7F2] text-[#241814] pt-24 sm:pt-28 pb-24 relative overflow-hidden">
+      {/* Background Architectural & Culinary Drawings Watermarks */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+        {/* Scalloped Arch behind header */}
+        <div className="absolute top-8 left-1/2 -translate-x-1/2 w-[720px] text-[#C59B27] opacity-[0.05] sm:opacity-[0.07]">
+          <DelhiMehrabArchDrawing className="w-full h-auto" />
+        </div>
+        {/* Botanical Spices on left margin */}
+        <div className="absolute top-[680px] -left-12 w-[340px] text-[#C59B27] opacity-[0.05] sm:opacity-[0.07]">
+          <BotanicalSpicesDrawing className="w-full h-auto" />
+        </div>
+        {/* Desi Ghee Handi on right margin */}
+        <div className="absolute top-[1380px] -right-12 w-[340px] text-[#C59B27] opacity-[0.05] sm:opacity-[0.07]">
+          <DesiGheeHandiDrawing className="w-full h-auto" />
+        </div>
+        {/* Lotus Medallion near bottom */}
+        <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[480px] text-[#C59B27] opacity-[0.04]">
+          <RoyalPadmaMandalaDrawing className="w-full h-auto" />
+        </div>
+      </div>
+
       {/* Menu Header */}
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Breadcrumb Navigation */}
         <nav className="flex items-center space-x-2 text-xs text-[#6E5D53] mb-4 sm:mb-6">

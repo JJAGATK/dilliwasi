@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from '../../router/Router';
 import { useLanguage } from '../../context/LanguageContext';
+import {
+  DelhiMehrabArchDrawing,
+  RoyalPadmaMandalaDrawing,
+} from '../common/DilliwasiHeritageDrawings';
 
 export function ParallaxHero() {
   const { t } = useLanguage();
@@ -53,6 +57,18 @@ export function ParallaxHero() {
       <div
         className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-[#D4A346]/10 blur-3xl pointer-events-none"
       />
+
+      {/* Subtle Architectural Heritage Line-Art Watermark */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+        {/* Imperial Scalloped Arch framing the background */}
+        <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[720px] sm:w-[920px] lg:w-[1100px] text-[#C59B27] opacity-[0.06] sm:opacity-[0.08]">
+          <DelhiMehrabArchDrawing className="w-full h-auto" />
+        </div>
+        {/* Subtle Lotus Medallion behind platter zone */}
+        <div className="absolute top-1/3 -right-20 w-[420px] text-[#C59B27] opacity-[0.05] sm:opacity-[0.07]">
+          <RoyalPadmaMandalaDrawing className="w-full h-auto" />
+        </div>
+      </div>
 
       {/* Main Container */}
       <div className="max-w-[1400px] mx-auto px-5 sm:px-8 w-full relative z-20">
