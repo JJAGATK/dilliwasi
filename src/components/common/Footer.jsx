@@ -118,9 +118,7 @@ export function Footer({ onOpenReserve: _onOpenReserve } = {}) {
             <Link to="/menu" className="hover:text-[#FAF7F2] transition-colors duration-300">Menu</Link>
             <Link to="/story" className="hover:text-[#FAF7F2] transition-colors duration-300">Our Story</Link>
             <Link to="/gallery" className="hover:text-[#FAF7F2] transition-colors duration-300">Gallery</Link>
-            <Link to="/reserve" className="hover:text-[#FAF7F2] transition-colors duration-300">Reserve</Link>
             <Link to="/contact" className="hover:text-[#FAF7F2] transition-colors duration-300">Contact</Link>
-            <Link to="/admin" className="text-[#E8C066] hover:text-[#FAF7F2] transition-colors duration-300">Admin Portal</Link>
           </div>
         </div>
       </div>

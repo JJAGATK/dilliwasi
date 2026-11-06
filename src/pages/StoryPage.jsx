@@ -10,7 +10,7 @@ import {
   LotusMedallionDrawing,
 } from '../components/common/HeritageDrawings';
 
-export function StoryPage({ onOpenReserve }) {
+export function StoryPage({ onOpenReserve: _onOpenReserve } = {}) {
   return (
     <div className="min-h-screen bg-[#FAF7F2] text-[#241814] pt-28 pb-24 relative overflow-hidden">
       {/* Page-Wide Architectural Line-Art Watermarks - Refined & Balanced */}
@@ -159,18 +159,20 @@ export function StoryPage({ onOpenReserve }) {
           </div>
         </div>
 
-        {/* Call to Table */}
+        {/* Call to Experience */}
         <div className="mt-20 text-center max-w-xl mx-auto space-y-6">
           <h2 className="font-serif text-3xl font-semibold text-[#241814]">
             Experience the Heritage Firsthand
           </h2>
           <p className="text-sm text-[#6E5D53] leading-relaxed">
-            Reserve a table in our central stone courtyard or secluded private dining alcove.
+            Explore our curated degustation journeys and time-honored Awadhi recipes.
           </p>
           <div>
-            <Button variant="primary" size="lg" onClick={onOpenReserve} className="uppercase tracking-widest text-xs">
-              Book a Dining Table
-            </Button>
+            <Link to="/menu">
+              <Button variant="primary" size="lg" className="uppercase tracking-widest text-xs">
+                Explore Heritage Menu
+              </Button>
+            </Link>
           </div>
         </div>
 

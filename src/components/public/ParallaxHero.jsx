@@ -97,15 +97,6 @@ export function ParallaxHero({ onOpenReserve: _onOpenReserve } = {}) {
                   {t.hero.ctaPrimary}
                 </button>
               </Link>
-
-              <Link to="/reserve" className="w-full sm:w-auto">
-                <button
-                  type="button"
-                  className="w-full sm:w-auto px-8 py-4 rounded-full border border-[rgba(212,163,70,0.6)] text-[#241814] bg-[#F4EFE6]/80 hover:bg-[#FAF7F2] hover:border-[#B38234] font-semibold text-sm tracking-wide transition-all duration-300 btn-tactile cursor-pointer shadow-xs"
-                >
-                  {t.hero.ctaSecondary}
-                </button>
-              </Link>
             </div>
 
             {/* Three Pillar Indicators */}

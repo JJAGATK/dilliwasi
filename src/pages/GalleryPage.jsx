@@ -4,7 +4,7 @@ import { galleryItems } from '../data/mockData';
 import { ToranaDivider } from '../components/common/ToranaDivider';
 import { Button } from '../components/common/Button';
 
-export function GalleryPage({ onOpenReserve }) {
+export function GalleryPage({ onOpenReserve: _onOpenReserve } = {}) {
   const [selectedItem, setSelectedItem] = useState(null);
   const [activeFilter, setActiveFilter] = useState('all'); // 'all' | 'Cuisine' | 'Craft' | 'Ambiance'
 
@@ -165,9 +165,11 @@ export function GalleryPage({ onOpenReserve }) {
                 <h3 className="font-serif text-xl font-semibold text-[#241814]">{selectedItem.title}</h3>
                 <p className="text-sm text-[#6E5D53] leading-relaxed">{selectedItem.description}</p>
                 <div className="pt-4 flex items-center justify-end border-t border-[rgba(110,93,83,0.15)]">
-                  <Button variant="primary" size="sm" onClick={() => { setSelectedItem(null); onOpenReserve(); }}>
-                    Reserve This Table Experience
-                  </Button>
+                  <Link to="/menu">
+                    <Button variant="primary" size="sm" onClick={() => setSelectedItem(null)}>
+                      Explore Heritage Menu
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

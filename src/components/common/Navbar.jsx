@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from '../../router/Router';
-import { Button } from './Button';
 import { BrandLogo } from './BrandLogo';
 import { useLanguage } from '../../context/LanguageContext';
 
-export function Navbar({ onOpenReserve }) {
+export function Navbar({ onOpenReserve: _onOpenReserve } = {}) {
   const { pathname } = useLocation();
   const { lang, setLang, t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +34,6 @@ export function Navbar({ onOpenReserve }) {
     { to: '/menu', label: t.nav.menu },
     { to: '/story', label: t.nav.story },
     { to: '/gallery', label: t.nav.gallery },
-    { to: '/reserve', label: t.nav.reserve },
     { to: '/contact', label: t.nav.contact },
   ];
 
@@ -87,7 +85,7 @@ export function Navbar({ onOpenReserve }) {
           })}
         </nav>
 
-        {/* Controls: Language Switcher + Dashboard + Reserve CTA */}
+        {/* Controls: Language Switcher */}
         <div className="hidden sm:flex items-center space-x-3.5">
           {/* Bilingual Language Selector: EN / हिन्दी */}
           <div className="flex items-center rounded-full border border-[rgba(212,163,70,0.35)] p-0.5 text-[11px] bg-[rgba(212,163,70,0.06)]">
@@ -116,28 +114,6 @@ export function Navbar({ onOpenReserve }) {
               हिन्दी
             </button>
           </div>
-
-          <Link
-            to="/admin"
-            className={`text-xs px-3 py-1.5 rounded border transition-colors duration-400 ${
-              isScrolled
-                ? 'text-[#E8C066] border-[rgba(232,192,102,0.3)] hover:bg-[#380812]'
-                : 'text-[#6E5D53] border-[rgba(110,93,83,0.3)] hover:bg-[#F4EFE6]'
-            }`}
-            title="Management Dashboard"
-          >
-            {t.nav.dashboard}
-          </Link>
-
-          <Link to="/reserve">
-            <Button
-              variant="primary"
-              size="sm"
-              className="tracking-wider text-xs uppercase"
-            >
-              {t.nav.reserve}
-            </Button>
-          </Link>
         </div>
 
         {/* Mobile Hamburger Toggle */}
@@ -200,29 +176,7 @@ export function Navbar({ onOpenReserve }) {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to="/admin"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-base text-[#E8C066] py-2 flex items-center justify-between"
-            >
-              <span>{t.nav.dashboard}</span>
-              <span className="text-xs uppercase px-2 py-0.5 rounded bg-[rgba(212,163,70,0.15)]">Staff</span>
-            </Link>
           </nav>
-
-          <div className="mt-8 pt-4">
-            <Button
-              variant="primary"
-              size="lg"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenReserve();
-              }}
-              className="w-full uppercase tracking-widest text-sm"
-            >
-              {t.nav.reserve}
-            </Button>
-          </div>
         </div>
       )}
     </header>

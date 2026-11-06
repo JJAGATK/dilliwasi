@@ -11,7 +11,6 @@ import { MenuPage } from './pages/MenuPage';
 import { StoryPage } from './pages/StoryPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { ContactPage } from './pages/ContactPage';
-import { ReservePage } from './pages/ReservePage';
 
 // Admin Pages
 import { AdminLayout } from './pages/admin/AdminLayout';
@@ -82,7 +81,7 @@ function AppContent() {
           />
           <Route
             path="/reserve"
-            element={<ReservePage onAddReservation={handleAddNewReservation} />}
+            element={<MenuPage onOpenReserve={() => setIsReserveModalOpen(true)} />}
           />
           <Route
             path="*"

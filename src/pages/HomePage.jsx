@@ -71,15 +71,15 @@ export function HomePage({ onOpenReserve }) {
 
                 <div className="mt-6 pt-4 border-t border-[rgba(110,93,83,0.1)] flex items-center justify-between">
                   <span className="text-[11px] uppercase tracking-wider text-[#B38234] font-medium">
-                    Chef's Heritage Reserve
+                    Chef's Heritage Course
                   </span>
-                  <button
-                    onClick={onOpenReserve}
+                  <Link
+                    to="/menu"
                     className="text-xs font-semibold text-[#241814] hover:text-[#D4A346] transition-colors flex items-center space-x-1 cursor-pointer"
                   >
-                    <span>Reserve Dish</span>
+                    <span>View in Menu</span>
                     <span>&rarr;</span>
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -274,13 +274,13 @@ export function HomePage({ onOpenReserve }) {
                 </p>
 
                 <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
-                  <Link to="/reserve" className="w-full sm:w-auto">
+                  <Link to="/menu" className="w-full sm:w-auto">
                     <Button
                       variant="primary"
                       size="lg"
                       className="w-full sm:w-auto uppercase tracking-widest text-xs px-8"
                     >
-                      Reserve Table Online
+                      Explore Tasting Menu
                     </Button>
                   </Link>
                   <a
