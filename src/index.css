@@ -1,0 +1,279 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --color-canvas: #FAF7F2;
+  --color-surface: #F4EFE6;
+  --color-surface-elevated: #EDE5D8;
+  --color-surface-hover: #E8DFC8;
+  
+  --color-canvas-dark: #2A050C;
+  --color-surface-dark: #1F0409;
+  --color-surface-elevated-dark: #380812;
+  --color-surface-hover-dark: #4A0C1A;
+
+  --color-ink-primary: #241814;
+  --color-ink-secondary: #6E5D53;
+  --color-ink-muted: #9B897D;
+
+  --color-text-primary-dark: #FAF7F2;
+  --color-text-secondary-dark: #C7B8AA;
+  --color-text-muted-dark: #8C7A6D;
+
+  --color-accent: #D4A346;
+  --color-accent-light: #E8C066;
+  --color-accent-dark: #B38234;
+  --color-accent-glow: rgba(212, 163, 70, 0.18);
+
+  --color-border-subtle: rgba(212, 163, 70, 0.22);
+  --color-border-strong: rgba(110, 93, 83, 0.35);
+  --color-border-dark: rgba(232, 192, 102, 0.20);
+
+  --color-veg: #2E7D32;
+  --color-non-veg: #C62828;
+  --color-spice: #D84315;
+
+  /* Fonts */
+  --font-serif: "Bodoni Moda", Georgia, serif;
+  --font-sans: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Motion */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 120ms var(--ease-spring);
+  --transition-normal: 240ms var(--ease-spring);
+  --transition-slow: 380ms var(--ease-spring);
+}
+
+/* Global Reset & Base Typography */
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink-primary);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+
+.label-caps {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Global Smooth Interactive & Color Transitions */
+a, button, input, select, textarea {
+  transition: color 250ms var(--ease-spring),
+              background-color 250ms var(--ease-spring),
+              border-color 250ms var(--ease-spring),
+              box-shadow 250ms var(--ease-spring),
+              opacity 200ms var(--ease-spring);
+}
+
+/* ============================================================
+   Enhanced Native Select & Option Visual & Hover System
+   ============================================================ */
+
+select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23B38234' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.8' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1.15em 1.15em;
+  padding-right: 2.25rem !important;
+  transition: all 220ms var(--ease-spring);
+}
+
+select:hover {
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 0 0 3px var(--color-accent-glow), 0 4px 14px rgba(42, 5, 12, 0.08) !important;
+  background-color: #FFFFFF !important;
+  transform: translateY(-1px);
+}
+
+select:focus {
+  border-color: var(--color-accent-dark) !important;
+  box-shadow: 0 0 0 4px rgba(212, 163, 70, 0.28) !important;
+  outline: none;
+}
+
+/* Option styling within native selects across supporting browser engines */
+select option {
+  padding: 10px 14px;
+  background-color: #FAF7F2;
+  color: #241814;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+select option:hover,
+select option:focus,
+select option:checked {
+  background-color: #2A050C !important;
+  color: #FAF7F2 !important;
+  font-weight: 600;
+}
+
+optgroup {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: #B38234;
+  background-color: #F4EFE6;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 10px 4px;
+}
+
+/* Page Enter Transition */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page-enter {
+  animation: pageEnter 320ms var(--ease-spring) forwards;
+}
+
+/* Interactive Feedback */
+.btn-tactile {
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.btn-tactile:hover {
+  transform: translateY(-2px);
+}
+
+.btn-tactile:active {
+  transform: translateY(1px);
+}
+
+/* Floating Animations for Culinary Elements */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(3deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(14px) rotate(-3deg);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 9.5s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 5s ease-in-out infinite;
+}
+
+/* Thermal Paper Receipt Styling */
+.thermal-receipt {
+  background: #fdfdfd;
+  color: #1a1a1a;
+  font-family: "Courier New", Courier, monospace;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+.thermal-receipt::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: radial-gradient(circle, transparent, transparent 50%, #fdfdfd 50%, #fdfdfd 100%);
+  background-size: 16px 20px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4B5A5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Focus Visibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
